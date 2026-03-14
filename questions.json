@@ -1,0 +1,1043 @@
+[
+  {
+    "id": 1,
+    "answers": [
+      "A",
+      "D"
+    ],
+    "question": "1 class Base {\n2// insert code here\n3}\n4\n5 public class Derived extends Base {\n6\n7\n8\n9\n10\npublic static void main(String[] args) {\nDerived obj = new Derived();\nobj.setNum(3);\nSystem.out.println(\"Square = \" + obj.getNum() * obj.getNum());\n11}\n12}\n\nWhich two options, when inserted independently inside class Base, ensure that the class is being properly encapsulated and allow the program to execute and print the square of the number?",
+    "options": {
+      "A": "2 private int num;\n3\n4 public int getNum() {\n5    return num;\n6}\n7\n8 public void setNum(int num) {\n9   this.num = num;\n10}",
+      "B": "2 public int num;\n3\n4 protected public int getNum() {\n5   return num;\n6}\n7\n8 protected public void setNum(int num) {\n9  this.num = num;\n10}",
+      "C": "2 private int num;\n3\n4 public int getNum() {\n5   return num;\n6}\n7\n8 private void setNum(int num) {\n9  this.num = num;\n10}",
+      "D": "2 protected int num;\n3\n4 public int getNum() {\n5   return num;\n6}\n7\n8 public void setNum(int num) {\n9  this.num = num;\n10}",
+      "E": "2 protected int num;\n3\n4 private int getNum() {\n5  return num;\n6}\n7\n8 public void setNum(int num) {\n9  this.num = num;\n10}"
+    }
+  },
+  {
+    "id": 2,
+    "answers": [
+      "D"
+    ],
+    "question": "1 class Overloading {\n2\n3  int x(double d) {\n4    System.out.println(\"one\");\n5    return 0;\n6  }\n7\n8  String x(double d) {\n9    System.out.println(\"two\");\n10   return null;\n11 }\n12\n13  double x(double d) {\n14  System.out.println(\"three\");\n15   return 0.0;\n16 }\n17\n18 public static void main(String args) {\n19 new Overloading().x(4.0);\n20 }\n21}\n\nWhat is the result?",
+    "options": {
+      "A": "One",
+      "B": "Two",
+      "C": "Three",
+      "D": "Compilation fails."
+    }
+  },
+  {
+    "id": 3,
+    "answers": [
+      "B"
+    ],
+    "question": "1 public class Whizlabs {\n2\n3 public static void main(String[] args) {\n4   String s = \"A\";\n5\n6   switch (s) {\n7   case \"a\":\n8     System.out.println(\"simaple A \");\n9   default:\n10    System.out.print(\"default \");\n11  case \"A\":\n12    System.out.print(\"Capital A \");\n13  }\n14 }\n15}\n\nWhat is the result?",
+    "options": {
+      "A": "simaple A",
+      "B": "Capital A",
+      "C": "simaple A default Capital A",
+      "D": "simaple A default",
+      "E": "Compilation fails."
+    }
+  },
+  {
+    "id": 4,
+    "answers": [
+      "D",
+      "G",
+      "H"
+    ],
+    "question": "1 public class CheckingAccount {\n2\n3 public int amount;\n4\n5 public CheckingAccount(int amount) {\n6   this.amount = amount;\n7 }\n8\n9 public int getAmount() {\n10  return amount;\n11}\n12\n13 public void changeAmount(int x) {\n14    amount += x;\n15 }\n16}\n\nAnd given the following main method, located in another class:\n\n1 public static void main(String[] args){\n2 CheckingAccount acct = new CheckingAccount((int) (Math.random() * 1000));\n3 //line n1\n4 System.out.println(acct.getAmount());\n5}\n\n\nWhich three lines, when inserted independently at line n1, cause the program to print a 0 balance?",
+    "options": {
+      "A": "this.amount = 0;",
+      "B": "amount = 0;",
+      "C": "acct(0);",
+      "D": "acct.amount = 0;",
+      "E": "acct.getAmount() = 0;",
+      "F": "acct.changeAmount(0);",
+      "G": "acct.changeAmount(-acct.amount);",
+      "H": "acct.changeAmount(-acct.getAmount());"
+    }
+  },
+  {
+    "id": 5,
+    "answers": [
+      "B"
+    ],
+    "question": "1 public class Test {\n2\n3 static String[][] arr = new String[3][];\n4\n5 private static void doPrint() {\n6 //insert code here\n7 }\n8\n9 public static void main(String[] args) {\n10 String[] class1 = {\"A\", \"B\", \"C\"};\n11 String[] class2 = {\"L\", \"M\", \"N\", \"O\"};\n12 String[] class3 = {\"I\", \"J\"};\n13   arr[0] = class1;\n14   arr[1] = class2;\n15   arr[2] = class3;\n16   Test.doPrint();\n17 }\n18}\n\nWhich code fragment, when inserted at line //insert code here, enables the code to print COJ?",
+    "options": {
+      "A": "6 int i = 0;\n7 for (String[] sub: arr) {\n8 int j = sub.length - 1;\n9 for (String str: sub) {\n10   System.out.println(str[j]);\n11   i++;\n12 }\n13}",
+      "B": "6 for (int i = 0; i < arr.length; i++) {\n7 int j = arr[i].length - 1;\n8 System.out.print(arr[i][j]);\n9}",
+      "C": "6 int i = 0;\n7 for (String[] sub: arr[][]) {\n8 int j = sub.length;\n9\tSystem.out.print(arr[i][j]);\n10      i++;\n11}",
+      "D": "6 for (int i = 0; i < arr.length - 1; i++) {\n7  int j = arr[i].length - 1;\n8  System.out.print(arr[i][j]);\n9  i++;\n10}"
+    }
+  },
+  {
+    "id": 6,
+    "answers": [
+      "C"
+    ],
+    "question": "Given the code fragment:\n\n2 public static void main(String[] args) {\n3 int ii = 0;\n4 int jj = 7;\n5 for (ii = 0; ii < jj - 1; ii = ii + 2) {\n6   System.out.print(ii + \" \");\n7 }\n8}\n\nWhat is the result?",
+    "options": {
+      "A": "2 4",
+      "B": "0 2 4 6",
+      "C": "0 2 4",
+      "D": "Compilation fails"
+    }
+  },
+  {
+    "id": 7,
+    "answers": [
+      "C"
+    ],
+    "question": "1 public class MyFor3 {\n2\n3 public static void main(String[] args) {\n4 int[] xx = null;\n5 for (int ii: xx) {\n6     System.out.println(ii);\n7   }\n8  }\n9}\n\nWhat is the result?",
+    "options": {
+      "A": "null",
+      "B": "Compilation fails",
+      "C": "An exception is thrown at runtime",
+      "D": "0"
+    }
+  },
+  {
+    "id": 8,
+    "answers": [
+      "D"
+    ],
+    "question": "Given: TestApp.java\n\n1 public class TestApp {\n2   public static void main(String[] args) {\n3     TestApp t = new TestApp();\n4     try {\n5       t.doPrint();\n6       t.doList();\n7     } catch (Exception e2) {\n8       System.out.println(\"Caught \" + e2);\n9     }\n10 }\n11 public void doList() throws Exception {\n12    throw new Error(\"Error\");\n13 }\n14 public void doPrint() throws Exception {\n15    throw new RuntimeException(\"Exception\");\n16 }\n17}\n\nWhat is the result?",
+    "options": {
+      "A": "Caught java.lang.RuntimeException: Exception\nException in thread \"main\" java.lang.Error: Error\nat TestApp.doList(TestApp.java: 14)\nat TestApp.main(TestApp.java: 6)",
+      "B": "Exception in thread \"main\" java.lang.Error: Error\nat TestApp.doList(TestApp.java: 14)\nat TestApp.main(TestApp.java: 6)",
+      "C": "Caught java.lang.RuntimeException: Exception\nCaught java.lang.Error: Error",
+      "D": "Caught java.lang.RuntimeException: Exception"
+    }
+  },
+  {
+    "id": 9,
+    "answers": [
+      "D"
+    ],
+    "question": "Which of the following will print current time?",
+    "options": {
+      "A": "System.out.print(new LocalTime().now());",
+      "B": "System.out.print(new LocalTime());",
+      "C": "System.out.print(LocalTime.now());",
+      "D": "System.out.print(LocalTime.today());",
+      "E": "None of the above."
+    }
+  },
+  {
+    "id": 10,
+    "answers": [
+      "B"
+    ],
+    "question": "Given:\n\n1 public class Test {\n2\n3  public static void main(String[] args) {\n4   if (args[0].equals(\"Hello\") ? false : true) {\n5      System.out.println(\"Success\");\n6   } else {\n7      System.out.println(\"Failure\");\n8   }\n9  }\n10}\n\nAnd given the commands:\njavac Test.java\njava Test Hello\n\nWhat is the result?",
+    "options": {
+      "A": "Success",
+      "B": "Failure",
+      "C": "Compilation fails.",
+      "D": "An exception is thrown at runtime"
+    }
+  },
+  {
+    "id": 11,
+    "answers": [
+      "C"
+    ],
+    "question": "1 class Cake {\n2\n3  int model;\n4  String flavor;\n5\n6  Cake() {\n7    model = 0;\n8    flavor = \"Unknown\";\n9 }\n10}\n11\n12 public class Test {\n13\n14 public static void main(String[] args) {\n15   Cake c = new Cake();\n16   bake1(c);\n17   System.out.println(c.model + \" \" + c.flavor);\n18   bake2(c);\n19   System.out.println(c.model + \" \" + c.flavor);\n20 }\n21\n22 public static Cake bake1(Cake c) {\n23   c.flavor = \"Strawberry\";\n24   c.model = 1200;\n25   return c;\n26 }\n27\n28 public static void bake2(Cake c) {\n29   c.flavor = \"Chocolate\";\n30   c.model = 1230;\n31   return;\n32 }\n33}\n\nWhat is the result?",
+    "options": {
+      "A": "0 unknown\n   0 unknown",
+      "B": "1200 Strawberry\n   1200 Strawberry",
+      "C": "1200 Strawberry\n   1230 Chocolate",
+      "D": "Compilation fails"
+    }
+  },
+  {
+    "id": 12,
+    "answers": [
+      "B"
+    ],
+    "question": "5 int i, j = 0;\n6 i = (3 * 2 + 4 + 5);\n7 j = (3 * ((2 + 4) + 5));\n8 System.out.println(\"i:\" + i + \" j:\" + j);\nWhat is the result?",
+    "options": {
+      "A": "i:16\nj:33",
+      "B": "i:15\nj:33",
+      "C": "i:33\nj:23",
+      "D": "i:15\nj:23"
+    }
+  },
+  {
+    "id": 13,
+    "answers": [
+      "A",
+      "D"
+    ],
+    "question": "Which two actions will improve the encapsulation of a class?",
+    "options": {
+      "A": "Changing the access modifier of a field from public to private",
+      "B": "Removing the public modifier from a class declaration",
+      "C": "Changing the return type of a method to void",
+      "D": "Returning a copy of the contents of an array or ArrayList instead of a direct reference"
+    }
+  },
+  {
+    "id": 14,
+    "answers": [
+      "A"
+    ],
+    "question": "6 float x = 22.00f % 3.00f;\n7 int y = 22 % 3;\n8 System.out.print(x + \", \" + y);\nWhat is the result?",
+    "options": {
+      "A": "1.0, 1",
+      "B": "1.0f, 1",
+      "C": "7.33, 7",
+      "D": "Compilation fails",
+      "E": "An exception is thrown at runtime"
+    }
+  },
+  {
+    "id": 15,
+    "answers": [
+      "B"
+    ],
+    "question": "1 public class Equal {\n2\n3  public static void main(String[] args) {\n4    String str1 = \"Java\";\n5    String[] str2 = {\"J\", \"a\", \"v\", \"a\"};\n6    String str3 = \"\";\n7    for (String str : str2) {\n8      str3 = str3 + str;\n9    }\n10   boolean b1 = (str1 == str3);\n11   boolean b2 = (str1.equals(str3));\n12   System.out.print(b1 + \", \" + b2);\n13  }\n14 }\nWhat is the result?",
+    "options": {
+      "A": "true, false",
+      "B": "false, true",
+      "C": "true, true",
+      "D": "false, false"
+    }
+  },
+  {
+    "id": 16,
+    "answers": [
+      "B"
+    ],
+    "question": "1 public class MyClass {\n2\n3  public static void main(String[] args) {\n4    String s = \" Java Duke \";\n5    int len = s.trim().length();\n6    System.out.print(len);\n7  }\n8 }\nWhat is the result?",
+    "options": {
+      "A": "8",
+      "B": "9",
+      "C": "11",
+      "D": "10",
+      "E": "Compilation fails"
+    }
+  },
+  {
+    "id": 17,
+    "answers": [
+      "D"
+    ],
+    "question": "The protected modifier on a Field declaration within a public class means that the field __________ .",
+    "options": {
+      "A": "Cannot be modified",
+      "B": "Can be read but not written from outside the class",
+      "C": "Can be read and written from this class and its subclasses only within the same package",
+      "D": "Can be read and written from this class and its subclasses defined in any package"
+    }
+  },
+  {
+    "id": 18,
+    "answers": [
+      "C"
+    ],
+    "question": "3 class Student {\n4\n5  int rollnumber;\n6  String name;\n7  List cources = new ArrayList();\n8\n9  // insert code here\n10\n11 public String toString() {\n12   return rollnumber + \" : \" + name + \" : \" + cources;\n13 }\n14 }\nAnd,\n\n20 public class Test {\n21\n22  public static void main(String[] args) {\n23    List cs = new ArrayList();\n24    cs.add(\"Java\");\n25    cs.add(\"C\");\n26    Student s = new Student(123, \"Fred\", cs);\n27    System.out.println(s);\n28  }\n29 }\n\nWhich code fragment, when inserted at line // insert code here, enables class Test to print 123 : Fred : [Java, C]?",
+    "options": {
+      "A": "9 private Student(int i, String name, List cs) {\n10 /* initialization code goes here */\n11 }",
+      "B": "9 public void Student(int i, String name, List cs) {\n10 /* initialization code goes here */\n11 }",
+      "C": "9 Student(int i, String name, List cs) {\n10 /* initialization code goes here */\n11 }",
+      "D": "9 Student(int i, String name, ArrayList cs) {\n10 /* initialization code goes here */\n11 }"
+    }
+  },
+  {
+    "id": 19,
+    "answers": [
+      "A",
+      "B"
+    ],
+    "question": "1 public class Circle {\n2\n3  double radius;\n4  public double area;\n5\n6  public Circle(double r) {\n7    radius = r;\n8  }\n9\n10 public double getRadius() {\n11   return radius;\n12 }\n13\n14 public void setRadius(double r) {\n15   radius = r;\n16 }\n17\n18 public double getArea() {\n19   return /* ??? */;\n20 }\n21 }\n22\n23 class App {\n24\n25  public static void main(String[] args) {\n26    Circle c1 = new Circle(17.4);\n27    c1.area = Math.PI * c1.getRadius() * c1.getRadius();\n28  }\n29 }\nThe class is poorly encapsulated. You need to change the circle class to compute and return the area instead. Which two modifications are necessary to ensure that the class is being properly encapsulated?",
+    "options": {
+      "A": "Remove the area field.",
+      "B": "Change the getArea( ) method as follows: public double getArea ( ) { return Math.PI * radius * radius; }",
+      "C": "Add the following method: public double getArea ( ) { area = Math.PI * radius * radius; }",
+      "D": "Change the cacess modifier of the SerRadius ( ) method to be protected."
+    }
+  },
+  {
+    "id": 20,
+    "answers": [
+      "E"
+    ],
+    "question": "1 public class Series {\n2\n3  public static void main(String[] args) {\n4    int arr[] = {1, 2, 3};\n5    for (int var : arr) {\n6      int i = 1;\n7      while (i <= var);\n8      System.out.println(i++);\n9    }\n10  }\n11 }\nWhat is the result?",
+    "options": {
+      "A": "1 1 1",
+      "B": "1 2 3",
+      "C": "2 3 4",
+      "D": "Compilation fails",
+      "E": "The loop executes infinite times"
+    }
+  },
+  {
+    "id": 21,
+    "answers": [
+      "C"
+    ],
+    "question": "class Product {\n  double price;\n}\n\npublic class Test {\n  public void updatePrice(Product product, double price) {\n    price = price * 2;\n    product.price = product.price + price;\n  }\n\n  public static void main(String[] args) {\n    Product prt = new Product();\n    prt.price = 200;\n    double newPrice = 100;\n\n    Test t = new Test();\n    t.updatePrice(prt, newPrice);\n    System.out.println(prt.price + \" : \" + newPrice);\n  }\n}\nWhat is the result?",
+    "options": {
+      "A": "200.0 : 100.0",
+      "B": "400.0 : 200.0",
+      "C": "400.0 : 100.0",
+      "D": "Compilation fails."
+    }
+  },
+  {
+    "id": 22,
+    "answers": [
+      "A",
+      "C"
+    ],
+    "question": "Given the following segment of code:\n\nArrayList<Vehicle> myList = new ArrayList<>();\nmyList.add(new Motorcycle());\nWhich two statements, if either were true, would make the code compile?",
+    "options": {
+      "A": "Vehicle is an interface that is implemented by the Motorcycle class.",
+      "B": "Vehicle and Motorcycle both implement the Transportation interface",
+      "C": "Vehicle is a superclass of Motorcycle.",
+      "D": "Motorcycle is a superclass of Vehicle.",
+      "E": "Vehicle and Motorcycle both extend the Transportation superclass.",
+      "F": "Motorcycle is an interface that implements the Vehicle class."
+    }
+  },
+  {
+    "id": 23,
+    "answers": [
+      "D"
+    ],
+    "question": "Given the code fragment:\n\npublic static void main(String[] args) {\n  String date = LocalDate\n                .parse(\"2014-05-04\")\n                .format(DateTimeFormatter.ISO_DATE_TIME);\n  System.out.println(date);\n}\nWhat is the result?",
+    "options": {
+      "A": "May 04, 2014T00:00:00.000",
+      "B": "2014-05-04T00:00:00.000",
+      "C": "5/4/14T00:00:00.000",
+      "D": "An exception is thrown at runtime."
+    }
+  },
+  {
+    "id": 24,
+    "answers": [
+      "C"
+    ],
+    "question": "Given the code fragment:\n\npublic static void main(String[] args) {\n  Short s1 = 200;\n  Integer s2 = 400;\n  Long s3 = (long) s1 + s2;            //line n1\n  String s4 = (String) (s3 * s2);      //line n2\n  System.out.println(\"Sum is \" + s4);\n}\nWhat is the result?",
+    "options": {
+      "A": "Sum is 600",
+      "B": "Compilation fails at line n1.",
+      "C": "Compilation fails at line n2.",
+      "D": "A ClassCastException is thrown at line n1.",
+      "E": "A ClassCastException is thrown at line n2."
+    }
+  },
+  {
+    "id": 25,
+    "answers": [
+      "A"
+    ],
+    "question": "What is the name of the Java concept that uses access modifiers to protect variables and hide them within a class?",
+    "options": {
+      "A": "Encapsulation",
+      "B": "Inheritance",
+      "C": "Abstraction",
+      "D": "Instantiation",
+      "E": "Polymorphism"
+    }
+  },
+  {
+    "id": 26,
+    "answers": [
+      "C",
+      "D"
+    ],
+    "question": "Given the code fragment:\n\nabstract class Planet {\n  protected void revolve() {    //line n1\n  }\n  abstract void rotate();       //line n2\n}\n\nclass Earth extends Planet {\n  void revolve() {              //line n3\n  }\n  protected void rotate() {     //line n4\n  }\n}\nWhich two modifications, made independently, enable the code to compile?",
+    "options": {
+      "A": "Make the method at line n1 public.",
+      "B": "Make the method at line n2 public.",
+      "C": "Make the method at line n3 public.",
+      "D": "Make the method at line n3 protected.",
+      "E": "Make the method at line n4 public."
+    }
+  },
+  {
+    "id": 27,
+    "answers": [
+      "E"
+    ],
+    "question": "class Vehicle {\n    String type = \"4W\";\n    int maxSpeed = 100;\n\n    Vehicle(String type, int maxSpeed) {\n        this.type = type;\n        this.maxSpeed = maxSpeed;\n    }\n}\n\nclass Car extends Vehicle {\n    String trans;\n\n    Car(String trans) {         //line n1\n        this.trans = trans;\n    }\n\n    Car(String type, int maxSpeed, String trans) {\n        super(type, maxSpeed);\n        this(trans);      //line n2\n    }\n}\n\nAnd given the code fragment:\n\n7.  Car c1 = new Car(\"Auto\");\n8.  Car c2 = new Car(\"4W\", 150, \"Manual\");\n9.  System.out.println(c1.type + \" \" + c1.maxSpeed + \" \" + c1.trans);\n10. System.out.println(c2.type + \" \" + c2.maxSpeed + \" \" + c2.trans);\n\nWhat is the result?",
+    "options": {
+      "A": "4W 100 Auto 4W 150 Manual",
+      "B": "Null 0 Auto 4W 150 Manual",
+      "C": "Compilation fails only at line n1",
+      "D": "Compilation fails only at line n2",
+      "E": "Compilation fails at both line n1 and line n2"
+    }
+  },
+  {
+    "id": 28,
+    "answers": [
+      "A",
+      "C"
+    ],
+    "question": "1. class X {\n2.      public void printFileContent() {\n3.          /* code goes here */\n4.          throw new IOException();\n5.      }\n6. }\n7. public class Test {\n8.      public static void main(String[] args) {\n9.          X xobj = new X();\n10.         xobj.printFileContent();\n11.     }\n12. }\n\nWhich two modifications should you make so that the code compiles successfully?\n(哪兩個修改可以使程式碼成功編譯？)",
+    "options": {
+      "A": "Replace line 8 with public static void main(String[] args) throws Exception {",
+      "B": "Replace line 10 with:\n\ntry {\n    xobj.printFileContent();\n}\ncatch(Exception e) { }\ncatch(IOException e) { }",
+      "C": "Replace line 2 with public void printFileContent() throws IOException {",
+      "D": "Replace line 4 with throw new IOException(\"Exception raised\");",
+      "E": "At line 11, insert throw new IOException();"
+    }
+  },
+  {
+    "id": 29,
+    "answers": [
+      "B"
+    ],
+    "question": "public class Customer {\n    ElectricAccount acct = new ElectricAccount();\n\n    public void useElectricity(double kWh) {\n        acct.addkWh(kWh);\n    }\n}\n\npublic class ElectricAccount {\n    private double kWh;\n    private double rate = 0.07;\n    private double bill;\n\n    //line n1\n}\n\nQuestion:\nHow should you write methods in the ElectricAccount class at line n1 so that the member variable bill is always equal to the value of the member variable kWh multiplied by the member variable rate?\nAny amount of electricity used by a customer (represented by an instance of the Customer class) must contribute to the customer's bill (represented by the member variable bill) through the method useElectricity method. An instance of the customer class should never be able to tamper with or decrease the value of the member variable bill.",
+    "options": {
+      "A": "public void addkWh(double kWh) {\n    this.kWh += kWh;\n    this.bill = this.kWh * this.rate;\n}",
+      "B": "public void addkWh(double kWh) {\n    if (kWh > 0) {\n        this.kWh += kWh;\n        this.bill = this.kWh * this.rate;\n    }\n}",
+      "C": "private void addkWh(double kWh) {\n    if (kWh > 0) {\n        this.kWh += kWh;\n        this.bill = this.kWh * this.rate;\n    }\n}",
+      "D": "public void addkWh(double kWh) {\n    if (kWh > 0) {\n        this.kWh += kWh;\n        setBill(this.kWh);\n    }\n}\npublic void setBill(double kWh) {\n    bill = kWh * rate;\n}"
+    }
+  },
+  {
+    "id": 30,
+    "answers": [
+      "B"
+    ],
+    "question": "Given the code fragment:\n\npublic static void main(String[] args) {\n    StringBuilder sb = new StringBuilder(5);\n    String s = \"\";\n\n    if (sb.equals(s)) {\n        System.out.println(\"Match 1\");\n    } else if (sb.toString().equals(s.toString())) {\n        System.out.println(\"Match 2\");\n    } else {\n        System.out.println(\"No Match\");\n    }\n}\n\nWhat is the result?",
+    "options": {
+      "A": "Match 1",
+      "B": "Match 2",
+      "C": "No Match",
+      "D": "A NullPointerException is thrown at runtime."
+    }
+  },
+  {
+    "id": 31,
+    "answers": [
+      "D"
+    ],
+    "question": "interface Readable {\n    public void readBook();\n    public void setBookMark();\n}\n\nabstract class Book implements Readable {   // line n1\n    public void readBook() { }\n    // line n2\n}\n\nclass EBook extends Book {                  // line n3\n    public void readBook() { }\n    // line n4\n}\n\nAnd given the code fragment:\n\nBook book1 = new EBook();\nbook1.readBook();\n\nWhich option enables the code to compile? (哪一個選項能使程式碼成功編譯？)",
+    "options": {
+      "A": "Replace the code fragment at line n1 with:\nclass Book implements Readable {",
+      "B": "At line n2 insert:\npublic abstract void setBookMark();",
+      "C": "Replace the code fragment at line n3 with:\nabstract class EBook extends Book {",
+      "D": "At line n4 insert:\npublic void setBookMark() { }"
+    }
+  },
+  {
+    "id": 32,
+    "answers": [
+      "C"
+    ],
+    "question": "Given:\n\npublic static void main(String[] args) {\n    String ta = \"A \";\n    ta = ta.concat(\"B \");\n    String tb = \"C \";\n    ta = ta.concat(tb);\n    ta.replace('C', 'D');\n    ta = ta.concat(tb);\n    System.out.println(ta);\n}\n\nWhat is the result?",
+    "options": {
+      "A": "A B C D",
+      "B": "A C D",
+      "C": "A B C C",
+      "D": "A B D",
+      "E": "A B D C"
+    }
+  },
+  {
+    "id": 33,
+    "answers": [
+      "C"
+    ],
+    "question": "class CD {\n    int r;\n    CD(int r) {\n        this.r = r;\n    }\n}\n\nclass DVD extends CD {\n    int c;\n    DVD(int r, int c) {\n        // line n1\n    }\n}\n\nAnd given the code fragment:\n\nDVD dvd = new DVD(10, 20);\n\nWhich code fragment should you use at line n1 to instantiate the dvd object successfully?\n(在 line n1 應該使用哪段程式碼來成功實例化 dvd 物件？)",
+    "options": {
+      "A": "super.r = r;\nthis.c = c;",
+      "B": "super(r);\nthis(c);",
+      "C": "super(r);\nthis.c = c;",
+      "D": "this.c = r;\nsuper(c);"
+    }
+  },
+  {
+    "id": 34,
+    "answers": [
+      "B"
+    ],
+    "question": "Given the code fragment:\n\nint a[] = {1, 2, 3, 4, 5};\nfor(XXX) {\n    System.out.print(a[e]);\n}\n\nWhich option can replace xxx to enable the code to print 135?",
+    "options": {
+      "A": "int e = 0; e <= 4; e++",
+      "B": "int e = 0; e < 5; e += 2",
+      "C": "int e = 1; e <= 5; e += 1",
+      "D": "int e = 1; e < 5; e += 2"
+    }
+  },
+  {
+    "id": 35,
+    "answers": [
+      "A"
+    ],
+    "question": "Which statement best describes encapsulation?",
+    "options": {
+      "A": "Encapsulation ensures that classes can be designed so that only certain fields and methods of an object are accessible from other objects.",
+      "B": "Encapsulation ensures that classes can be designed so that their methods are inheritable.",
+      "C": "Encapsulation ensures that classes can be designed with some fields and methods declared as abstract.",
+      "D": "Encapsulation ensures that classes can be designed so that if a method has an argument MyType x, any subclass of MyType can be passed to that method."
+    }
+  },
+  {
+    "id": 36,
+    "answers": [
+      "E"
+    ],
+    "question": "Given the code fragment from three files:\n\nSalesMan.java:\n\n\npackage sales;\npublic class SalesMan { }\n\nProduct.java:\n\npackage sales.products;\npublic class Product { }\n\nMarket.java:\n\n1. package market;\n2. // insert code here\n3. public class USMarket {\n4.      SalesMan sm;\n5.      Product p;\n6. }\n\nWhich code fragment, when inserted at line 2, enables the code to compile?",
+    "options": {
+      "A": "import sales.*;",
+      "B": "import java.sales.products.*;",
+      "C": "import sales;\nimport sales.products;",
+      "D": "import sales.*;\nimport products.*;",
+      "E": "import sales.*;\nimport sales.products.*;"
+    }
+  },
+  {
+    "id": 37,
+    "answers": [
+      "D",
+      "G",
+      "H"
+    ],
+    "question": "Given the following class:\n\npublic class CheckingAccount {\n    public int amount;\n    public CheckingAccount(int amount) {\n        this.amount = amount;\n    }\n    public int getAmount() {\n        return amount;\n    }\n    public void changeAmount(int x) {\n        amount += x;\n    }\n}\n\nAnd given the following main method, located in another class:\n\npublic static void main(String[] args) {\n    CheckingAccount acct = new CheckingAccount((int) (Math.random() * 1000));\n    // line n1\n    System.out.println(acct.getAmount());\n}\n\nWhich three lines, when inserted independently at line n1, cause the program to print a 0 balance? (哪三行程式碼分別插入 line n1 時，會使程式印出 0？)",
+    "options": {
+      "A": "this.amount = 0;",
+      "B": "amount = 0;",
+      "C": "acct(0);",
+      "D": "acct.amount = 0;",
+      "E": "acct.getAmount() = 0;",
+      "F": "acct.changeAmount(0);",
+      "G": "acct.changeAmount(-acct.amount);",
+      "H": "acct.changeAmount(-acct.getAmount());"
+    }
+  },
+  {
+    "id": 38,
+    "answers": [
+      "D"
+    ],
+    "question": "Given the code fragment:\n\nString shirts[][] = new String[2][2];\nshirts[0][0] = \"red\";\nshirts[0][1] = \"blue\";\nshirts[1][0] = \"small\";\nshirts[1][1] = \"medium\";\n\nWhich code fragment prints red: blue: small: medium:?",
+    "options": {
+      "A": "for (int index = 1; index < 2; index++) {\n    for (int idx = 1; idx < 2; idx++) {\n        System.out.print(shirts[index][idx] + \":\");\n    }\n}",
+      "B": "for (int index = 0; index < 2; ++index) {\n    for (int idx = 0; idx < index; ++idx) {\n        System.out.print(shirts[index][idx] + \":\");\n    }\n}",
+      "C": "for (String c : colors) {\n    for (String s : sizes) {\n        System.out.println(s + \":\");\n    }\n}",
+      "D": "for (int index = 0; index < 2;) {\n    for (int idx = 0; idx < 2;) {\n        System.out.print(shirts[index][idx] + \":\");\n        idx++;\n    }\n    index++;\n}"
+    }
+  },
+  {
+    "id": 39,
+    "answers": [
+      "D"
+    ],
+    "question": "Given the code fragment:\n\npublic class Test {\n\n    void readCard(int cardNo) throws Exception {\n        System.out.println(\"Reading Card\");\n    }\n\n    void checkCard(int cardNo) throws RuntimeException { // line n1\n        System.out.println(\"Checking Card\");\n    }\n\n    public static void main(String[] args) {\n        Test ex = new Test();\n        int cardNo = 12344;\n        ex.checkCard(cardNo);      // line n2\n        ex.readCard(cardNo);       // line n3\n    }\n\n}\n\nWhat is the result?",
+    "options": {
+      "A": "Reading Card\nChecking Card",
+      "B": "Compilation fails only at line n1.",
+      "C": "Compilation fails only at line n2.",
+      "D": "Compilation fails only at line n3.",
+      "E": "Compilation fails at both line n2 and line n3.\n?"
+    }
+  },
+  {
+    "id": 40,
+    "answers": [
+      "B"
+    ],
+    "question": "Given the code fragment:\n\n?3.  public static void main(String[] args) {\n5.      int x = 5;\n6.      while (isAvailable(x)) {\n8.          System.out.println(x);\n9.      }\n10.  }\n11. public static boolean isAvailable(int x) { \n12. \treturn x-- > 0 ? true : false; \n13.}\n\nWhich modification enables the code to print 54321?",
+    "options": {
+      "A": "Replace line 6 with System.out.print (--x);",
+      "B": "At line 7, insert x--;",
+      "C": "Replace line 6 with --x; and, at line 7, insert System.out.print (x);",
+      "D": "Replace line 12 with return (x > 0) ? false : true;"
+    }
+  },
+  {
+    "id": 41,
+    "answers": [
+      "A"
+    ],
+    "question": "Given the code fragment:\n\n4.  public static void main(String[] args) {\n5.      boolean opt = true;\n6.      switch (opt) {\n7.          case true:\n8.              System.out.print(\"True\");\n9.          break;\n10.         default:\n11.             System.out.print(\"****\");\n12.     }\n13.     System.out.println(\"Done\");\n14. }\n\nWhich modification enables the code fragment to print TrueDone?",
+    "options": {
+      "A": "Replace line 5 with String opt = \"true\"; Replace line 7 with case \"true\":",
+      "B": "Replace line 5 with boolean opt = 1; Replace line 7 with case 1:",
+      "C": "At line 9, remove the break statement.",
+      "D": "Remove the default section."
+    }
+  },
+  {
+    "id": 41,
+    "answers": [
+      "D"
+    ],
+    "question": "Given the following main method:\n\npublic static void main(String[] args) {\n    int num = 5;\n    do {\n        System.out.print(num-- + \" \");\n    } while (num == 0);\n}\n\nWhat is the result?",
+    "options": {
+      "A": "5 4 3 2 1 0 printed",
+      "B": "5 4 3 2 1 printed",
+      "C": "4 2 1 printed",
+      "D": "5 printed",
+      "E": "Nothing is printed"
+    }
+  },
+  {
+    "id": 43,
+    "answers": [
+      "E"
+    ],
+    "question": "pag30\n\nQUESTION 23\nGiven the code fragment:\n\nint x = 100;\nint a = x++;\nint b = x++;\nint d = (a < b) ? (a < c ? a : b < c ? b : c) : a;\nSystem.out.println(d);\nWhat is the result?",
+    "options": {
+      "A": "100",
+      "B": "101",
+      "C": "102",
+      "D": "103",
+      "E": "Compilation fails"
+    }
+  },
+  {
+    "id": 44,
+    "answers": [
+      "A"
+    ],
+    "question": "public class Test {\n\n    public static void main(String[] args) {\n\n        String[][] chs = new String[2][]; \n        chs[0] = new String[2]; \n        chs[1] = new String[5]; \n        int i = 97; \n\n       for (int a = 0; a < chs.length; a++) {\n            for (int b = 0; b < chs.length; b++) {               \n                \n                chs[a][b] = \"\" + i; \n                i++; \n            }\n        }\n\n       for (String[] ca : chs) {            \n            for (String c : ca) {                 \n                System.out.print(c + \" \"); \n            }\n             System.out.println(); \n        }\n    }\n}",
+    "options": {
+      "A": "97 98\n99 100 null null null",
+      "B": "97 98\n99 100 101 102 103",
+      "C": "Compilation fails.",
+      "D": "A NullPointerException is thrown at runtime.",
+      "E": "An ArrayIndexOutOfBoundsException is thrown at runtime."
+    }
+  },
+  {
+    "id": 45,
+    "answers": [
+      "A",
+      "C"
+    ],
+    "question": "public class Employee {\n    String name;\n    boolean contract;\n    double salary;\n\n    Employee() {\n        // line n1\n    }\n\n    public String toString() {\n        return name + \":\" + contract + \":\" + salary;\n    }\n\n    public static void main(String[] args) {\n        Employee e = new Employee();\n        // line n2\n        System.out.print(e);\n    }\n}\n\nWhich two modifications, when made independently, enable the code to print joe:true: 100.0?",
+    "options": {
+      "A": "Replace line n2 with:\ne.name = \"Joe\";\ne.contract = true;\ne.salary = 100;",
+      "B": "Replace line n2 with:\nthis.name = \"Joe\";\nthis.contract = true;\nthis.salary = 100;",
+      "C": "Replace line n1 with:\nthis.name = new String(\"Joe\");\nthis.contract = new Boolean(true);\nthis.salary = new Double(100);",
+      "D": "Replace line n1 with:\nname = \"Joe\";\ncontract = TRUE;\nsalary = 100.0f;",
+      "E": "Replace line n1 with:\nthis(\"Joe\", true, 100);"
+    }
+  },
+  {
+    "id": 46,
+    "answers": [
+      "A"
+    ],
+    "question": "public static void main(String[] args) {    \n    List<String> names = new ArrayList<>();\n    \n    names.add(\"Robb\");\n    names.add(\"Bran\");\n    names.add(\"Rick\");\n    names.add(\"Bran\");\n   \n    if (names.remove(\"Bran\")) { \n       names.remove(\"Jon\"); \n    }\n    System.out.println(names);\n}\n\nWhat is the result?",
+    "options": {
+      "A": "[Robb, Rick, Bran]",
+      "B": "[Robb, Rick]",
+      "C": "[Robb, Bran, Rick, Bran]",
+      "D": "An exception is thrown at runtime."
+    }
+  },
+  {
+    "id": 47,
+    "answers": [
+      "C"
+    ],
+    "question": "class A {\n    public A() {\n        System.out.print(\"A \");\n    }\n}\n\nclass B extends A {\n    public B() {                // line n1\n        System.out.print(\"B \");\n    }\n}\n\nclass C extends B {\n    public C() {                // line n2\n        System.out.print(\"C \");\n    }\n    public static void main(String[] args) {\n        C c = new C();\n    }\n}",
+    "options": {
+      "A": "C B A",
+      "B": "C",
+      "C": "A B C",
+      "D": "Compilation fails at line n1 and line n2"
+    }
+  },
+  {
+    "id": 48,
+    "answers": [
+      "C"
+    ],
+    "question": "class X {\n    static int i; \n    int j;        \n\n    public static void main(String[] args) {\n        X x1 = new X();\n        X x2 = new X();\n        \n        x1.i = 3; \n        x1.j = 4;\n        x2.i = 5; \n        x2.j = 6;\n        System.out.println(\n            x1.i + \" \" + \n            x1.j + \" \" + \n            x2.i + \" \" + \n            x2.j);\n    }\n}",
+    "options": {
+      "A": "3 4 5 6",
+      "B": "3 4 3 6",
+      "C": "5 4 5 6",
+      "D": "3 6 4 6"
+    }
+  },
+  {
+    "id": 49,
+    "answers": [
+      "B"
+    ],
+    "question": "public class Test {\n    public static void main(String[] args) {\n        /* insert code here (第 3 行) \n        array[0] = 10; \n        array[1] = 20; \n        System.out.print(array[0] + \":\" + array[1]);\n    }\n}\n\nWhich code fragment, when inserted at line 3, enables the code to print 10:20?\n（哪一段程式碼插入第 3 行後，能讓程式印出 10:20？）",
+    "options": {
+      "A": "int[] array n = new int[2];",
+      "B": "int[] array; array = int[2];",
+      "C": "int array[] = new int[2];",
+      "D": "int array [2];"
+    }
+  },
+  {
+    "id": 50,
+    "answers": [
+      "C"
+    ],
+    "question": "public static void main(String[] args) {\n    String[] arr = {\"A\", \"B\", \"C\", \"D\"};\n    for (int i = 0; i < arr.length; i++) {\n        System.out.print(arr[i] + \" \");\n        if (arr[i].equals(\"C\")) {\n            continue;\n        }\n        System.out.println(\"Work done\");\n        break;\n    }\n}",
+    "options": {
+      "A": "A B C Work done",
+      "B": "A B C D Work done",
+      "C": "A Work done",
+      "D": "Compilation fails"
+    }
+  },
+  {
+    "id": 51,
+    "answers": [
+      "A",
+      "C",
+      "D"
+    ],
+    "question": "Which three are advantages of the Java exception mechanism?\n(哪三項是 Java 異常處理機制的優點？)",
+    "options": {
+      "A": "Improves the program structure because the error handling code is separated from the normal program function.",
+      "B": "Provides a set of standard exceptions that covers all the possible errors.",
+      "C": "Improves the program structure because the programmer can choose where to handle exceptions.",
+      "D": "Improves the program structure because exceptions must be handled in the method in which they occurred.",
+      "E": "Allows the creation of new exceptions that are tailored to the particular program being created."
+    }
+  },
+  {
+    "id": 53,
+    "answers": [
+      "B"
+    ],
+    "question": "Given: \n\nclass Alpha {\n    int ns;\n    static int s;\n    Alpha (int ns) {\n        if (s < ns) {\n            s = ns;\n        }\n        this.ns = ns;\n    }\n    void doPrint() {\n        System.out.println(\"ns = \" + ns + \" s = \" + s);\n    }\n}\n\npublic class TestA {\n    public static void main(String[] args) {\n        Alpha ref1 = new Alpha (50);\n        Alpha ref2 = new Alpha (125);\n        Alpha ref3 = new Alpha (100);\n        ref1.doPrint();\n        ref2.doPrint();\n        ref3.doPrint();\n    }\n}\n\nWhat is the result?",
+    "options": {
+      "A": "ns = 50 s = 125, ns = 125 s = 125, ns = 100 s = 125",
+      "B": "ns = 50 s = 50, ns = 125 s = 125, ns = 100 s = 100  (註：此處選項內容依據圖表邏輯對應)",
+      "C": "ns = 50 s = 125, ns = 125 s = 125, ns = 0 s = 125",
+      "D": "ns = 50 s = 50, ns = 125 s = 125, ns = 100 s = 125"
+    }
+  },
+  {
+    "id": 54,
+    "answers": [
+      "A"
+    ],
+    "question": "Given the code fragment: \n\nJavaLocalDate date1 = LocalDate.now();\nLocalDate date2 = LocalDate.of(2014, 6, 20);\nLocalDate date3 = LocalDate.parse(\"2014-06-20\", DateTimeFormatter.ISO_DATE);\nSystem.out.println(\"date1 = \" + date1);\nSystem.out.println(\"date2 = \" + date2);\nSystem.out.println(\"date3 = \" + date3);\n\nAssume that the system date is June 20, 2014. What is the result?",
+    "options": {
+      "A": "date1 = 2014-06-20, date2 = 2014-06-20, date3 = 2014-06-20",
+      "B": "date1 = 06/20/2014, date2 = 2014-06-20, date3 = Jun 20, 2014",
+      "C": "Compilation fails.",
+      "D": "A DateParseException is thrown at runtime."
+    }
+  },
+  {
+    "id": 55,
+    "answers": [
+      "A"
+    ],
+    "question": "Given the code fragment:\n\n7.  StringBuilder sb1 = new StringBuilder(\"Duke\");\n8.  String str1 = sb1.toString();\n9.  // insert code here\n10. System.out.print(str1 == str2);\n\nWhich code fragment, when inserted at line 9, enables the code to print true?",
+    "options": {
+      "A": "String str2 = str1;",
+      "B": "String str2 = new String (str1);",
+      "C": "String str2 = sb1.toString();",
+      "D": "String str2 = \"Duke\";"
+    }
+  },
+  {
+    "id": 56,
+    "answers": [
+      "A"
+    ],
+    "question": "Given the code fragment: \n\npublic class Test {\n    static int count = 0;\n    int i = 0;\n    public void changeCount() {\n        while (i < 5) {\n            i++;\n            count++;\n        }\n    }\n    public static void main(String[] args) {\n        Test check1 = new Test();\n        Test check2 = new Test();\n        check1.changeCount();\n        check2.changeCount();\n        System.out.print(check1.count + \":\" + check2.count);\n    }\n}\nWhat is the result?",
+    "options": {
+      "A": "10:10",
+      "B": "5:5",
+      "C": "5:10",
+      "D": "Compilation fails"
+    }
+  },
+  {
+    "id": 57,
+    "answers": [
+      "A",
+      "C"
+    ],
+    "question": "Given the code fragment:\n\npublic static void main(String[] args) {\n    double discount = 0;\n    int qty = Integer.parseInt(args[0]);\n    // line n1;\n}\nAnd given the requirements: \nIf the value of the qty variable is greater than or equal to 90, discount = 0.5 \nIf the value of the qty variable is between 80 and 90, discount = 0.2 \n\nWhich two code fragments can be independently placed at line n1 to meet the requirements?",
+    "options": {
+      "A": "if (qty >= 90) { discount = 0.5; } if (qty > 80 && qty < 90) { discount = 0.2; }",
+      "B": "discount = (qty >= 90) ? 0.5 : 0; discount = (qty > 80) ? 0.2 : 0;",
+      "C": "discount = (qty >= 90) ? 0.5 : (qty > 80) ? 0.2 : 0;",
+      "D": "if (qty > 80 && qty < 90) { discount = 0.2; } else { discount = 0; } if (qty >= 90) { discount = 0.5; } else { discount = 0; }",
+      "E": "discount = (qty > 80) ? 0.2 : (qty >= 90) ? 0.5 : 0;"
+    }
+  },
+  {
+    "id": 58,
+    "answers": [
+      "B",
+      "C",
+      "E"
+    ],
+    "question": "Which three statements describe the object-oriented features of the Java language?",
+    "options": {
+      "A": "Objects cannot be reused.",
+      "B": "A subclass can inherit from a superclass.",
+      "C": "Objects can share behaviors with other objects.",
+      "D": "A package must contain more than one class.",
+      "E": "Object is the root class of all other objects.",
+      "F": "A main method must be declared in every class."
+    }
+  },
+  {
+    "id": 59,
+    "answers": [
+      "E"
+    ],
+    "question": "Given the following code: \n\napublic static void main(String[] args) {\n    String[] planets = {\"Mercury\", \"Venus\", \"Earth\", \"Mars\"};\n    System.out.println(planets.length);\n    System.out.println(planets[1].length());\n}\nWhat is the output?",
+    "options": {
+      "A": "4, 4",
+      "B": "3, 5",
+      "C": "4, 7",
+      "D": "5, 4",
+      "E": "4, 5",
+      "F": "4, 21"
+    }
+  },
+  {
+    "id": 60,
+    "answers": [
+      "B",
+      "C"
+    ],
+    "question": "Given the code fragment: \n\nclass CCMask {\n    public static String maskCC(String creditCard) {\n        String x = \"XXXX-XXXX-XXXX-\";\n        // line n1\n    }\n    public static void main(String[] args) {\n        System.out.println(maskCC(\"1234-5678-9101-1121\"));\n    }\n}\n\nYou must ensure that the maskCC method returns a string that hides all digits except the four last digits (and hyphens). \n\nWhich two code fragments should you use at line n1?",
+    "options": {
+      "A": "StringBuilder sb = new StringBuilder (creditCard); sb.substring (15, 19); return x + sb;",
+      "B": "return x + creditCard.substring(15, 19);",
+      "C": "StringBuilder sb = new StringBuilder(x); sb.append (creditCard, 15, 19); return sb.toString();",
+      "D": "StringBuilder sb = new StringBuilder (creditCard); StringBuilder s = sb.insert (0, x); return s.toString();"
+    }
+  },
+  {
+    "id": 61,
+    "answers": [
+      "C"
+    ],
+    "question": "Given: \n\npackage p1;\npublic class Acc {\n    int p;\n    private int q;\n    protected int r;\n    public int s;\n}\n\nTest.java:\n\npackage p2;\nimport p1.Acc;\npublic class Test extends Acc {\n    public static void main(String[] args) {\n        Acc obj = new Test();\n    }\n}\n\nWhich statement is true?",
+    "options": {
+      "A": "Both p and s are accessible by obj.",
+      "B": "Only s is accessible by obj.",
+      "C": "Both r and s are accessible by obj.",
+      "D": "p, r, and s are accessible by obj."
+    }
+  },
+  {
+    "id": 62,
+    "answers": [
+      "C"
+    ],
+    "question": "Given:\n\nclass Base {\n    public void test() { System.out.println(\"Base\"); }\n}\n\nDerivedA.java:\n\nclass DerivedA extends Base {\n    public void test() { System.out.println(\"DerivedA \"); }\n}\nDerivedB.java:\n\nclass DerivedB extends DerivedA {\n    public void test() { System.out.println(\"DerivedB \"); }\n    public static void main(String[] args) {\n        Base b1 = new DerivedB();\n        Base b2 = new DerivedA();\n        Base b3 = new DerivedB();\n        b1 = (Base) b3;\n        Base b4 = (DerivedA) b3;\n        b1.test();\n        b4.test();\n    }\n}\n\nWhat is the result?",
+    "options": {
+      "A": "Base, DerivedA",
+      "B": "Base, DerivedB",
+      "C": "DerivedB, DerivedB",
+      "D": "DerivedB, DerivedA",
+      "E": "A ClassCastException is thrown at runtime."
+    }
+  },
+  {
+    "id": 63,
+    "answers": [
+      "D"
+    ],
+    "question": "Given: \n\nSystem.out.println(\"5 + 2 = \" + 3 + 4);\nSystem.out.println(\"5 + 2 = \" + (3 + 4));\n\nWhat is the result?",
+    "options": {
+      "A": "5 + 2 = 34, 5 + 2 = 34",
+      "B": "5 + 2 = 3 + 4, 5 + 2 = 7",
+      "C": "7 = 7, 7 + 7",
+      "D": "5 + 2 = 34, 5 + 2 = 7"
+    }
+  },
+  {
+    "id": 64,
+    "answers": [
+      "C"
+    ],
+    "question": "Given the code fragments: \n\nPerson.java\npublic class Person {\n    String name;\n    int age;\n    public Person(String n, int a) { name = n; age = a; }\n    public String getName() { return name; }\n    public int getAge() { return age; }\n}\n\nTest.java:\n\npublic static void checkAge(List<Person> list, Predicate<Person> predicate) {\n    for (Person p : list) {\n        if (predicate.test(p)) {\n            System.out.println(p.name + \" \");\n        }\n    }\n}\n\npublic static void main(String[] args) {\n    List<Person> iList = Arrays.asList(new Person(\"Hank\", 45), new Person(\"Charlie\", 40), new Person(\"Smith\", 38));\n    // line n1\n}\n\nWhich code fragment, when inserted at line n1, enables the code to print Hank?",
+    "options": {
+      "A": "checkAge(iList, () -> p.getAge() > 40);",
+      "B": "checkAge(iList, Person p -> p.getAge() > 40);",
+      "C": "checkAge(iList, p -> p.getAge() > 40);",
+      "D": "checkAge(iList, (Person p) -> { p.getAge() > 40; });"
+    }
+  },
+  {
+    "id": 66,
+    "answers": [
+      "C"
+    ],
+    "question": "Given the code fragment: \n\npublic static void main(String[] args) {\n    String str = \" \";\n    str.trim();\n    System.out.println(str.equals(\"\") + \" \" + str.isEmpty());\n}\n\nWhat is the result?",
+    "options": {
+      "A": "true true",
+      "B": "true false",
+      "C": "false false",
+      "D": "false true"
+    }
+  },
+  {
+    "id": 67,
+    "answers": [
+      "B"
+    ],
+    "question": "Given the code fragment: \n\npublic class App {\n    public static void main(String[] args) {\n        String str1 = \"Java\";\n        String str2 = new String(\"java\");\n        // line n1\n        { System.out.println(\"Equal\"); }\n        else { System.out.println(\"Not Equal\"); \n\t}\n    }\n}\n\nWhich code fragment enables the App class to print Equal?",
+    "options": {
+      "A": "String str3 = str2; if (str1 == str3)",
+      "B": "if (str1.equalsIgnoreCase(str2))",
+      "C": "String str3 = str2; if (str1.equals(str3))",
+      "D": "if (str1.toLowerCase() == str2.toLowerCase())"
+    }
+  },
+  {
+    "id": 68,
+    "answers": [
+      "B"
+    ],
+    "question": "Given:\n\napublic class SumTest {\n    public static void doSum(Integer x, Integer y) { \n\tSystem.out.println(\"Integer sum is \" + (x + y)); \n}\n    public static void doSum(double x, double y) { \n\tSystem.out.println(\"double sum is \" + (x + y)); \n}\n    public static void doSum(float x, float y) { \n\tSystem.out.println(\"float sum is \" + (x + y)); \n}\n    public static void doSum(int x, int y) { \n\tSystem.out.println(\"int sum is \" + (x + y)); }\n\n    public static void main(String[] args) {\n        doSum(10, 20);\n        doSum(10.0, 20.0);\n    }\n}\n\nWhat is the result?",
+    "options": {
+      "A": "int sum is 30, float sum is 30.0",
+      "B": "int sum is 30, double sum is 30.0",
+      "C": "Integer sum is 30, double sum is 30.0",
+      "D": "Integer sum is 30, float sum is 30.0"
+    }
+  },
+  {
+    "id": 69,
+    "answers": [
+      "D"
+    ],
+    "question": "Given the code fragment:\n\nString[] strs = new String[2];\nint idx = 0;\nfor (String s : strs) {\n    strs[idx].concat(\" element \" + idx);\n    idx++;\n}\nfor (idx = 0; idx < strs.length; idx++) {\n    System.out.println(strs[idx]);\n}\n\nWhat is the result?",
+    "options": {
+      "A": "Element 0, Element 1",
+      "B": "Null element 0, Null element 1",
+      "C": "Null, Null",
+      "D": "A NullPointerException is thrown at runtime."
+    }
+  },
+  {
+    "id": 70,
+    "answers": [
+      "D"
+    ],
+    "question": "Given:\n\nclass Vehicle {\n    int x;\n    Vehicle() { this(10); } // line n1\n    Vehicle(int x) { this.x = x; }\n}\nclass Car extends Vehicle {\n    int y;\n    Car() { super(); this(20); } // line n2\n    Car(int y) { this.y = y; }\n    public String toString() { return super.x + \":\" + this.y; }\n}\n\nAnd given the code fragment:\n\nVehicle y = new Car();\nSystem.out.println(y);\n\nWhat is the result?",
+    "options": {
+      "A": "10:2\n0B. 0:20\nC. Compilation fails at line n1\nD. Compilation fails at line n2"
+    }
+  },
+  {
+    "id": 71,
+    "answers": [
+      "C"
+    ],
+    "question": "MyString.java\n\npackage p1;\n\nclass MyString {\n    String msg;\n    MyString(String msg) {\n        this.msg = msg;\n    }\n}\n\nTest.java\n\npackage p1;\n\npublic class Test {\n    public static void main(String[] args) {\n        System.out.println(\"Hello \" + new StringBuilder(\"Java SE 8\"));\n        System.out.println(\"Hello \" + new MyString(\"Java SE 8\"));\n    }\n}",
+    "options": {
+      "A": "Hello Java SE 8\nHello Java SE 8",
+      "B": "Hello java.lang.StringBuilder@<<hashcode1>>\nHello p1.MyString@<<hashcode2>>",
+      "C": "Hello Java SE 8\nHello p1.MyString@<<hashcode>>",
+      "D": "Compilation fails at the Test class."
+    }
+  },
+  {
+    "id": 72,
+    "answers": [
+      "A",
+      "D",
+      "F"
+    ],
+    "question": "3.  public static void main(String[] args) {\n4.      int iVar = 100;\n5.      float fVar = 100.100f;\n6.      double dVar = 123;\n7.      iVar = fVar;\n8.      fVar = iVar;\n9.      dVar = fVar;\n10.     fVar = dVar;\n11.     dVar = iVar;\n12.     iVar = dVar;\n13. }\n\nWhich three lines fail to compile?",
+    "options": {
+      "A": "Line 7",
+      "B": "Line 8",
+      "C": "Line 9",
+      "D": "Line 10E. Line 11F. Line 12"
+    }
+  },
+  {
+    "id": 73,
+    "answers": [
+      "C"
+    ],
+    "question": "Given:Javapublic class MainTest {\n\n    public static void main(int[] args) {\n\tSystem.out.println(\"int main \" + args[0]);\n }\n    public static void main(Object[] args) { \n\tystem.out.println(\"Object main \" + args[0]);\n }\n    public static void main(String[] args) {\n\tSystem.out.println(\"String main \" + args[0]);\n }\n}\n\nand commands:\n\njavac MainTest.java\njava MainTest 1 2 3\n\nWhat is the result?",
+    "options": {
+      "A": "int main 1",
+      "B": "Object main 1",
+      "C": "String main 1",
+      "D": "Compilation fails",
+      "E": "An exception is thrown at runtime"
+    }
+  },
+  {
+    "id": 74,
+    "answers": [
+      "A"
+    ],
+    "question": "CQUESTION 57\n\nGiven the code fragment:\n\nint num[][] = new int[1][3];\nfor (int i = 0; i < num.length; i++) {\n    for (int j = 0; j < num[i].length; j++) {\n        num[i][j] = 10;\n    }\n}\n\nWhich option represents the state of the num array?",
+    "options": {
+      "A": "num[0][0]=10, num[0][1]=10, num[0][2]=10",
+      "B": "num[0][0]=10, num[1][0]=10, num[2][0]=10",
+      "C": "num[0][0]=10, num[0][1]=0, num[0][2]=0",
+      "D": "num[0][0]=10, num[0][1]=10, num[0][2]=10, num[0][3]=10 ... (等多個索引)"
+    }
+  },
+  {
+    "id": 75,
+    "answers": [
+      "D"
+    ],
+    "question": "CQUESTION 58\n\nGiven the code fragment:\n\n   public class Person{\n\tString name;\n\tint age = 25;\n\n   public Person(String name){\n  \tthis();\n\tsetName(name);\n  }\n  \n  public Person(String name,int age){\n  \tPerson(name);\n\tsetAge(age);\n  }\n\n  //setter and getter methods go here\n\n  public String show(){\n\treturn name+\" \"+age+\" \"+number;\n  }\n  public static void main(String[] args){\n\tPerson p1 = new Person(\"Jesse\");\n\tPerson p2 = new Person(\"Walter\",52);\n\tSystem.out.println(p1.show());\n\tSystem.out.println(p2.show());\n  }\n}\n\nWhat is the result?",
+    "options": {
+      "A": "Jesse 25\n   Walter 52",
+      "B": "Compilation fails only at line n1",
+      "C": "Compilation fails only at line n2",
+      "D": "Compilation fails only at line n1 and line n2"
+    }
+  },
+  {
+    "id": 76,
+    "answers": [
+      "C"
+    ],
+    "question": "Given the following code for a Planet object:\n\npublic class Planet {\n    public String name;\n    public int moons;\n\n    public Planet(String name, int moons) {\n        this.name = name;\n        this.moons = moons;\n    }\n}\n\nAnd the following main method:\n\npublic static void main(String[] args) {\n    Planet[] planets = {\n        new Planet(\"Mercury\", 0),\n        new Planet(\"Venus\", 0),\n        new Planet(\"Earth\", 1),\n        new Planet(\"Mars\", 2)\n    };\n\n    System.out.println(planets);\n    System.out.println(planets[2]);\n    System.out.println(planets[2].moons);\n}\n\nWhat is the output?",
+    "options": {
+      "A": "planets\nEarth\n1",
+      "B": "[LPlanets.Planet;@15db9742\nEarth\n1",
+      "C": "[LPlanets.Planet;@15db9742\nPlanets.Planet@6d06d69c\n1",
+      "D": "[LPlanets.Planet;@15db9742\nPlanets.Planet@6d06d69c\n[LPlanets.Moon;@7852e922",
+      "E": "[LPlanets.Planet;@15db9742\nVenus\n0"
+    }
+  },
+  {
+    "id": 77,
+    "answers": [
+      "A"
+    ],
+    "question": "You are asked to develop a program for a shopping application, and you are given the following information:\n\nThe application must contain the classes Toy, EduToy, and ConsToy. The Toy class is the superclass of the other two classes.\n\nThe int calculatePrice (Toy t) method calculates the price of a toy.\n\nThe void printToy (Toy t) method prints the details of a toy.\n\nWhich definition of the Toy class adds a valid layer of abstraction to the class hierarchy?",
+    "options": {
+      "A": "public abstract class Toy {\n    public abstract int calculatePrice(Toy t);\n    public void printToy(Toy t) { /* code goes here */ }\n}",
+      "B": "public abstract class Toy {\n    public int calculatePrice(Toy t) ;\n    public void printToy(Toy t) ;\n}",
+      "C": "public abstract class Toy {\n    public int calculatePrice(Toy t);\n    public final void printToy(Toy t) { /* code goes here */ }\n}",
+      "D": "public abstract class Toy {\n    public abstract int calculatePrice(Toy t) { /* code goes here */ }\n    public abstract void printToy(Toy t) { /* code goes here */ }\n}"
+    }
+  },
+  {
+    "id": 78,
+    "answers": [
+      "C"
+    ],
+    "question": "Given the following code:\n\nint[] intArr = {15,30,45,60,75};\nintArr[2] = intArr[4];\nintArr[4] = 90;\n\nWhat are the values of each element in inArr after this code has executes?",
+    "options": {
+      "A": "15,60,45,90,75",
+      "B": "15,90,45,90,75",
+      "C": "15,30,75,60,90\nE. 15,30,90,60,90",
+      "D": "15,4,45,60,90"
+    }
+  }
+]

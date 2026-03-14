@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java 練習題測驗系統</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== SETUP PAGE ===== -->
+  <div id="page-setup" class="page active">
+    <div class="setup-container">
+      <h1 class="app-title">Java 練習題測驗系統</h1>
+
+      <div id="load-error" class="error-banner hidden">
+        <strong>無法載入題庫！</strong> 請確認 <code>data/questions.json</code> 存在，並透過 HTTP 伺服器開啟此頁面（避免 CORS 錯誤）。
+      </div>
+
+      <div id="setup-loading" class="loading-indicator">載入題庫中…</div>
+
+      <div id="setup-form" class="hidden">
+
+        <div class="card setup-card">
+          <h2 class="card-title">設定選項</h2>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="range-start">題號範圍（起）</label>
+              <input type="number" id="range-start" min="1" value="1" />
+            </div>
+            <div class="form-group">
+              <label for="range-end">題號範圍（訖）</label>
+              <input type="number" id="range-end" min="1" value="999" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="count-select">題數</label>
+              <select id="count-select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="20" selected>20</option>
+                <option value="30">30</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+                <option value="150">150</option>
+                <option value="200">200</option>
+                <option value="all">全部</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="time-limit">時間限制（分鐘）</label>
+              <input type="number" id="time-limit" min="1" max="999" value="60" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>選項順序</label>
+              <div class="radio-group">
+                <label class="radio-label">
+                  <input type="radio" name="option-order" value="original" checked /> 原始順序
+                </label>
+                <label class="radio-label">
+                  <input type="radio" name="option-order" value="random" /> 隨機順序
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>音效</label>
+              <label class="toggle-switch">
+                <input type="checkbox" id="sound-toggle" checked />
+                <span class="toggle-slider"></span>
+                <span class="toggle-label" id="sound-label">開啟</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Weight preview -->
+        <div class="card setup-card" id="weight-preview-card">
+          <h2 class="card-title">高權重題目預覽 <span class="subtitle">（weight &gt; 1，依權重降序排列）</span></h2>
+          <div id="weight-preview-list" class="weight-list"></div>
+        </div>
+
+        <!-- Question search -->
+        <div class="card setup-card">
+          <h2 class="card-title">題目搜尋</h2>
+          <div class="search-bar">
+            <input type="number" id="search-id" min="1" placeholder="輸入題目編號，例：26" />
+            <button id="btn-search" class="btn btn-secondary">搜尋</button>
+          </div>
+          <div id="search-result" class="hidden"></div>
+        </div>
+
+        <div class="setup-actions">
+          <button id="btn-download" class="btn btn-secondary">下載 JSON</button>
+          <button id="btn-preview" class="btn btn-warning">預覽測驗</button>
+          <button id="btn-start" class="btn btn-primary">開始測驗</button>
+        </div>
+
+      </div><!-- /setup-form -->
+    </div><!-- /setup-container -->
+  </div><!-- /page-setup -->
+
+
+  <!-- ===== QUIZ PAGE ===== -->
+  <div id="page-quiz" class="page hidden">
+
+    <header class="quiz-header">
+      <div class="header-progress" id="header-progress">第 1/20 題 (0%)</div>
+      <div class="header-timer" id="header-timer">60:00</div>
+      <div class="header-actions">
+        <button id="btn-submit-now" class="btn btn-error btn-sm">立即交卷</button>
+        <button id="btn-restart" class="btn btn-secondary btn-sm">重新開始</button>
+      </div>
+    </header>
+
+    <div class="quiz-body">
+
+      <div class="card question-card" id="question-card">
+        <div class="question-meta">
+          <span class="badge badge-id" id="badge-qid">Q1</span>
+          <span class="badge" id="badge-type">單選題</span>
+        </div>
+        <div class="question-content" id="question-content"></div>
+        <div id="question-image-wrap" class="question-image-wrap hidden">
+          <img id="question-image" src="" alt="question image" />
+        </div>
+        <ul class="options-list" id="options-list"></ul>
+
+        <div class="answer-actions">
+          <button id="btn-answer" class="btn btn-success">提交答案</button>
+        </div>
+
+        <div id="feedback-area" class="feedback-area hidden"></div>
+        <div id="explanation-area" class="explanation-area hidden"></div>
+
+        <div class="nav-actions hidden" id="nav-actions">
+          <button id="btn-next" class="btn btn-primary">繼續下一題</button>
+        </div>
+      </div>
+
+    </div><!-- /quiz-body -->
+
+    <nav class="question-nav" id="question-nav"></nav>
+
+  </div><!-- /page-quiz -->
+
+
+  <!-- ===== RESULTS PAGE ===== -->
+  <div id="page-results" class="page hidden">
+    <div class="results-container">
+      <h1 class="results-title">測驗結果</h1>
+
+      <div class="results-summary card">
+        <div class="summary-stat">
+          <div class="stat-value" id="result-score">0/0</div>
+          <div class="stat-label">答對題數</div>
+        </div>
+        <div class="summary-stat">
+          <div class="stat-value" id="result-accuracy">0%</div>
+          <div class="stat-label">正確率</div>
+        </div>
+        <div class="summary-stat">
+          <div class="stat-value" id="result-time">00:00</div>
+          <div class="stat-label">作答時間</div>
+        </div>
+      </div>
+
+      <div class="chart-wrap card">
+        <canvas id="result-chart" width="260" height="260"></canvas>
+      </div>
+
+      <div class="results-actions">
+        <button id="btn-retry" class="btn btn-primary">再考一次</button>
+      </div>
+
+      <div id="wrong-review" class="wrong-review"></div>
+
+    </div>
+  </div><!-- /page-results -->
+
+
+  <script src="data/questions.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-csharp.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

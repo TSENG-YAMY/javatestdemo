@@ -1,0 +1,2476 @@
+===1(A,D)===
+
+Q1:
+
+1 class Base {
+2// insert code here
+3}
+4
+5 public class Derived extends Base {
+6
+7
+8
+9
+10
+public static void main(String[] args) {
+Derived obj = new Derived();
+obj.setNum(3);
+System.out.println("Square = " + obj.getNum() * obj.getNum());
+11}
+12}
+
+Which two options, when inserted independently inside class Base, ensure that the class is being properly encapsulated and allow the program to execute and print the square of the number?
+
+A.
+
+2 private int num;
+3
+4 public int getNum() {
+5    return num;
+6}
+7
+8 public void setNum(int num) {
+9   this.num = num;
+10}
+
+B.
+
+2 public int num;
+3
+4 protected public int getNum() {
+5   return num;
+6}
+7
+8 protected public void setNum(int num) {
+9  this.num = num;
+10}
+
+C.
+
+2 private int num;
+3
+4 public int getNum() {
+5   return num;
+6}
+7
+8 private void setNum(int num) {
+9  this.num = num;
+10}
+
+D.
+
+2 protected int num;
+3
+4 public int getNum() {
+5   return num;
+6}
+7
+8 public void setNum(int num) {
+9  this.num = num;
+10}
+
+E.
+
+2 protected int num;
+3
+4 private int getNum() {
+5  return num;
+6}
+7
+8 public void setNum(int num) {
+9  this.num = num;
+10}
+
+題解 A、D
+
+===2(D)===
+
+Q2:
+1 class Overloading {
+2
+3  int x(double d) {
+4    System.out.println("one");
+5    return 0;
+6  }
+7
+8  String x(double d) {
+9    System.out.println("two");
+10   return null;
+11 }
+12
+13  double x(double d) {
+14  System.out.println("three");
+15   return 0.0;
+16 }
+17
+18 public static void main(String args) {
+19 new Overloading().x(4.0);
+20 }
+21}
+
+What is the result?
+A. One
+B. Two
+C. Three
+D. Compilation fails.
+
+題解 D
+
+
+===3(B)===
+
+Q3:
+1 public class Whizlabs {
+2
+3 public static void main(String[] args) {
+4   String s = "A";
+5
+6   switch (s) {
+7   case "a":
+8     System.out.println("simaple A ");
+9   default:
+10    System.out.print("default ");
+11  case "A":
+12    System.out.print("Capital A ");
+13  }
+14 }
+15}
+
+What is the result?
+A. simaple A
+B. Capital A
+C. simaple A default Capital A
+D. simaple A default
+E. Compilation fails.
+
+題解 B
+
+===4(D,G,H)===
+
+Q4:
+1 public class CheckingAccount {
+2
+3 public int amount;
+4
+5 public CheckingAccount(int amount) {
+6   this.amount = amount;
+7 }
+8
+9 public int getAmount() {
+10  return amount;
+11}
+12
+13 public void changeAmount(int x) {
+14    amount += x;
+15 }
+16}
+
+And given the following main method, located in another class:
+
+1 public static void main(String[] args){
+2 CheckingAccount acct = new CheckingAccount((int) (Math.random() * 1000));
+3 //line n1
+4 System.out.println(acct.getAmount());
+5}
+
+
+Which three lines, when inserted independently at line n1, cause the program to print a 0 balance?
+A. this.amount = 0;
+B. amount = 0;
+C. acct(0);
+D. acct.amount = 0;
+E. acct.getAmount() = 0;
+F. acct.changeAmount(0);
+G. acct.changeAmount(-acct.amount);
+H. acct.changeAmount(-acct.getAmount());
+
+題解 D、G、H
+
+===5(B)===
+
+Q5:
+1 public class Test {
+2
+3 static String[][] arr = new String[3][];
+4
+5 private static void doPrint() {
+6 //insert code here
+7 }
+8
+9 public static void main(String[] args) {
+10 String[] class1 = {"A", "B", "C"};
+11 String[] class2 = {"L", "M", "N", "O"};
+12 String[] class3 = {"I", "J"};
+13   arr[0] = class1;
+14   arr[1] = class2;
+15   arr[2] = class3;
+16   Test.doPrint();
+17 }
+18}
+
+Which code fragment, when inserted at line //insert code here, enables the code to print COJ?
+
+A.
+
+6 int i = 0;
+7 for (String[] sub: arr) {
+8 int j = sub.length - 1;
+9 for (String str: sub) {
+10   System.out.println(str[j]);
+11   i++;
+12 }
+13}
+
+B.
+
+6 for (int i = 0; i < arr.length; i++) {
+7 int j = arr[i].length - 1;
+8 System.out.print(arr[i][j]);
+9}
+
+C.
+
+
+6 int i = 0;
+7 for (String[] sub: arr[][]) {
+8 int j = sub.length;
+9	System.out.print(arr[i][j]);
+10      i++;
+11}
+
+D.
+
+6 for (int i = 0; i < arr.length - 1; i++) {
+7  int j = arr[i].length - 1;
+8  System.out.print(arr[i][j]);
+9  i++;
+10}
+
+題解 B
+
+===6(C)===
+
+Q6:
+Given the code fragment:
+
+2 public static void main(String[] args) {
+3 int ii = 0;
+4 int jj = 7;
+5 for (ii = 0; ii < jj - 1; ii = ii + 2) {
+6   System.out.print(ii + " ");
+7 }
+8}
+
+What is the result?
+A. 2 4
+B. 0 2 4 6
+C. 0 2 4
+D. Compilation fails
+
+題解 C
+
+===7(C)===
+
+Q7:
+1 public class MyFor3 {
+2
+3 public static void main(String[] args) {
+4 int[] xx = null;
+5 for (int ii: xx) {
+6     System.out.println(ii);
+7   }
+8  }
+9}
+
+What is the result?
+A. null
+B. Compilation fails
+C. An exception is thrown at runtime
+D. 0
+
+題解 C
+
+===8(D)===
+
+Q8: try-catch
+Given: TestApp.java
+
+1 public class TestApp {
+2   public static void main(String[] args) {
+3     TestApp t = new TestApp();
+4     try {
+5       t.doPrint();
+6       t.doList();
+7     } catch (Exception e2) {
+8       System.out.println("Caught " + e2);
+9     }
+10 }
+11 public void doList() throws Exception {
+12    throw new Error("Error");
+13 }
+14 public void doPrint() throws Exception {
+15    throw new RuntimeException("Exception");
+16 }
+17}
+
+What is the result?
+A. Caught java.lang.RuntimeException: Exception
+Exception in thread "main" java.lang.Error: Error
+at TestApp.doList(TestApp.java: 14)
+at TestApp.main(TestApp.java: 6)
+
+B. Exception in thread "main" java.lang.Error: Error
+at TestApp.doList(TestApp.java: 14)
+at TestApp.main(TestApp.java: 6)
+
+C. Caught java.lang.RuntimeException: Exception
+Caught java.lang.Error: Error
+
+D. Caught java.lang.RuntimeException: Exception
+
+題解 D
+
+===9(D)===
+
+Q9: 輸出現在時間
+Which of the following will print current time?
+A. System.out.print(new LocalTime().now());
+B. System.out.print(new LocalTime());
+C. System.out.print(LocalTime.now());
+D. System.out.print(LocalTime.today());
+E. None of the above.
+
+題解 C
+
+===10(B)===
+
+Q10: 條件三元運算子(?:)
+Given:
+
+1 public class Test {
+2
+3  public static void main(String[] args) {
+4   if (args[0].equals("Hello") ? false : true) {
+5      System.out.println("Success");
+6   } else {
+7      System.out.println("Failure");
+8   }
+9  }
+10}
+
+And given the commands:
+javac Test.java
+java Test Hello
+
+What is the result?
+
+A. Success
+B. Failure
+C. Compilation fails.
+D. An exception is thrown at runtime
+
+題解 B
+
+===11(C)===
+
+Q11: 改變物件欄位值
+
+1 class Cake {
+2
+3  int model;
+4  String flavor;
+5
+6  Cake() {
+7    model = 0;
+8    flavor = "Unknown";
+9 }
+10}
+11
+12 public class Test {
+13
+14 public static void main(String[] args) {
+15   Cake c = new Cake();
+16   bake1(c);
+17   System.out.println(c.model + " " + c.flavor);
+18   bake2(c);
+19   System.out.println(c.model + " " + c.flavor);
+20 }
+21
+22 public static Cake bake1(Cake c) {
+23   c.flavor = "Strawberry";
+24   c.model = 1200;
+25   return c;
+26 }
+27
+28 public static void bake2(Cake c) {
+29   c.flavor = "Chocolate";
+30   c.model = 1230;
+31   return;
+32 }
+33}
+
+What is the result?
+
+A. 0 unknown
+   0 unknown
+B. 1200 Strawberry
+   1200 Strawberry
+C. 1200 Strawberry
+   1230 Chocolate
+D. Compilation fails
+
+題解 C
+
+===12(B)===
+
+Q12: 四則運算 2
+
+ int i, j = 0;
+ i = (3 * 2 + 4 + 5);
+ J= (3 * ((2 + 4) + 5));
+ System.out.println("i:" + i + " j:" + j);
+
+What is the result?
+
+A.
+i:16
+j:33
+
+B.
+i:15
+j:33
+
+C.
+i:33
+j:23
+
+D.
+i:15
+j:23
+
+題解 B
+
+===13(A,D)===
+
+Q13: 改善封裝
+Which two actions will improve the encapsulation of a class?
+
+A. Changing the access modifier of a field from public to private
+B. Removing the public modifier from a class declaration
+C. Changing the return type of a method to void
+D. Returning a copy of the contents of an array or ArrayList instead of a direct reference
+
+題解 A、D
+
+
+===14(A)===
+
+Q14: 改善封裝
+
+6 float x = 22.00f % 3.00f;
+7 int y = 22 % 3;
+8 System.out.print(x + ", " + y);
+
+What is the result?
+
+A. 1.0, 1
+B. 1.0f, 1
+C. 7.33, 7
+D. Compilation fails
+E. An exception is thrown at runtime
+
+題解 A
+
+===15(B)===
+
+Q15: 字串相等 3
+
+1 public class Equal {
+2
+3  public static void main(String[] args) {
+4    String str1 = "Java";
+5    String[] str2 = {"J", "a", "v", "a"};
+6    String str3 = "";
+7    for (String str : str2) {
+8      str3 = str3 + str;
+9    }
+10   boolean b1 = (str1 == str3);
+11   boolean b2 = (str1.equals(str3));
+12   System.out.print(b1 + ", " + b2);
+13  }
+14 }
+
+What is the result?
+
+A. true, false
+B. false, true
+C. true, true
+D. false, false
+
+題解 B
+
+===16(B)===
+
+Q16: String 物件的 trim 方法 2
+
+1 public class MyClass {
+2
+3  public static void main(String[] args) {
+4    String s = " Java Duke ";
+5    int len = s.trim().length();
+6    System.out.print(len);
+7  }
+8 }
+
+What is the result?
+
+A. 8
+B. 9
+C. 11
+D. 10
+E. Compilation fails
+
+題解 B
+
+===17(D)===
+
+Q17: protected 的存取範圍
+The protected modifier on a Field declaration within a public class means that the field __________ .
+
+A. Cannot be modified
+B. Can be read but not written from outside the class
+C. Can be read and written from this class and its subclasses only within the same package
+D. Can be read and written from this class and its subclasses defined in any package
+
+題解 D
+
+===18(C)===
+
+Q18: 如何輸出 123 : Fred : [Java, C]
+
+3 class Student {
+4
+5  int rollnumber;
+6  String name;
+7  List cources = new ArrayList();
+8
+9  // insert code here
+10
+11 public String toString() {
+12   return rollnumber + " : " + name + " : " + cources;
+13 }
+14 }
+And,
+
+20 public class Test {
+21
+22  public static void main(String[] args) {
+23    List cs = new ArrayList();
+24    cs.add("Java");
+25    cs.add("C");
+26    Student s = new Student(123, "Fred", cs);
+27    System.out.println(s);
+28  }
+29 }
+
+Which code fragment, when inserted at line // insert code here, enables class Test to print 123 : Fred : [Java, C]?
+
+A.
+
+Java
+9 private Student(int i, String name, List cs) {
+10 /* initialization code goes here */
+11 }
+B.
+
+Java
+9 public void Student(int i, String name, List cs) {
+10 /* initialization code goes here */
+11 }
+C.
+
+Java
+9 Student(int i, String name, List cs) {
+10 /* initialization code goes here */
+11 }
+D.
+
+Java
+9 Student(int i, String name, ArrayList cs) {
+10 /* initialization code goes here */
+11 }
+
+題解 C
+
+===19(A,B)===
+
+Q19: 計算圓的面積
+
+1 public class Circle {
+2
+3  double radius;
+4  public double area;
+5
+6  public Circle(double r) {
+7    radius = r;
+8  }
+9
+10 public double getRadius() {
+11   return radius;
+12 }
+13
+14 public void setRadius(double r) {
+15   radius = r;
+16 }
+17
+18 public double getArea() {
+19   return /* ??? */;
+20 }
+21 }
+22
+23 class App {
+24
+25  public static void main(String[] args) {
+26    Circle c1 = new Circle(17.4);
+27    c1.area = Math.PI * c1.getRadius() * c1.getRadius();
+28  }
+29 }
+
+The class is poorly encapsulated. You need to change the circle class to compute and return the area instead. Which two modifications are necessary to ensure that the class is being properly encapsulated?
+
+A. Remove the area field.
+B. Change the getArea( ) method as follows: public double getArea ( ) { return Math.PI * radius * radius; }
+C. Add the following method: public double getArea ( ) { area = Math.PI * radius * radius; }
+D. Change the cacess modifier of the SerRadius ( ) method to be protected.
+
+題解 A、B
+
+===20(E)===
+
+Q20: 無窮迴圈
+Java
+1 public class Series {
+2
+3  public static void main(String[] args) {
+4    int arr[] = {1, 2, 3};
+5    for (int var : arr) {
+6      int i = 1;
+7      while (i <= var);
+8      System.out.println(i++);
+9    }
+10  }
+11 }
+
+What is the result?
+
+A. 1 1 1
+B. 1 2 3
+C. 2 3 4
+D. Compilation fails
+E. The loop executes infinite times
+
+題解 E
+
+===21(C)===
+
+QUESTION 1
+
+class Product {
+  double price;
+}
+
+public class Test {
+  public void updatePrice(Product product, double price) {
+    price = price * 2;
+    product.price = product.price + price;
+  }
+
+  public static void main(String[] args) {
+    Product prt = new Product();
+    prt.price = 200;
+    double newPrice = 100;
+
+    Test t = new Test();
+    t.updatePrice(prt, newPrice);
+    System.out.println(prt.price + " : " + newPrice);
+  }
+}
+
+What is the result?
+
+A. 200.0 : 100.0
+B. 400.0 : 200.0
+C. 400.0 : 100.0
+D. Compilation fails.
+
+Correct Answer: C
+
+===22(AC)===
+
+  ArrayList<Vehicle> myList = new ArrayList<>();
+  myList.add(new Motorcycle());
+
+Which two statements, if either were true, would make the code compile?
+
+A. Vehicle is an interface that is implemented by the Motorcycle class.
+B. Vehicle and Motorcycle both implement the Transportation interface
+C. Vehicle is a superclass of Motorcycle.
+D. Motorcycle is a superclass of Vehicle.
+E. Vehicle and Motorcycle both extend the Transportation superclass.
+F. Motorcycle is an interface that implements the Vehicle class.
+
+Correct Answer: AC
+
+===23(D)===
+
+QUESTION 3
+
+public static void main(String[] args) {
+  String date = LocalDate
+                .parse("2014-05-04")
+                .format(DateTimeFormatter.ISO_DATE_TIME);
+  System.out.println(date);
+}
+
+What is the result?
+
+A. May 04, 2014T00:00:00.000
+B. 2014-05-04T00:00:00.000
+C. 5/4/14T00:00:00.000
+D. An exception is thrown at runtime.
+
+Correct Answer: D
+
+===24(C)===
+
+QUESTION 4
+
+public static void main(String[] args) {
+  Short s1 = 200;
+  Integer s2 = 400;
+  Long s3 = (long) s1 + s2;            //line n1
+  String s4 = (String) (s3 * s2);      //line n2
+  System.out.println("Sum is " + s4);
+}
+
+What is the result?
+
+A. Sum is 600
+B. Compilation fails at line n1.
+C. Compilation fails at line n2.
+D. A ClassCastException is thrown at line n1.
+E. A ClassCastException is thrown at line n2.
+
+Correct Answer: C
+
+===25(A)===
+
+QUESTION 5
+What is the name of the Java concept that uses access modifiers to protect variables and hide them within a class?
+
+A. Encapsulation
+B. Inheritance
+C. Abstraction
+D. Instantiation
+E. Polymorphism
+
+Correct Answer: A
+
+===26(C,D)===
+
+QUESTION 6
+
+abstract class Planet {
+  protected void revolve() {    //line n1
+  }
+  abstract void rotate();       //line n2
+}
+
+class Earth extends Planet {
+  void revolve() {              //line n3
+  }
+  protected void rotate() {     //line n4
+  }
+}
+
+Which two modifications, made independently, enable the code to compile?
+
+A. Make the method at line n1 public.
+B. Make the method at line n2 public.
+C. Make the method at line n3 public.
+D. Make the method at line n3 protected.
+E. Make the method at line n4 public.
+
+Correct Answer: CD
+
+===27(E)===
+
+class Vehicle {
+    String type = "4W";
+    int maxSpeed = 100;
+
+    Vehicle(String type, int maxSpeed) {
+        this.type = type;
+        this.maxSpeed = maxSpeed;
+    }
+}
+
+class Car extends Vehicle {
+    String trans;
+
+    Car(String trans) {         //line n1
+        this.trans = trans;
+    }
+
+    Car(String type, int maxSpeed, String trans) {
+        super(type, maxSpeed);
+        this(trans);      //line n2
+    }
+}
+
+And given the code fragment:
+
+7.  Car c1 = new Car("Auto");
+8.  Car c2 = new Car("4W", 150, "Manual");
+9.  System.out.println(c1.type + " " + c1.maxSpeed + " " + c1.trans);
+10. System.out.println(c2.type + " " + c2.maxSpeed + " " + c2.trans);
+
+What is the result?
+A. 4W 100 Auto 4W 150 Manual
+B. Null 0 Auto 4W 150 Manual
+C. Compilation fails only at line n1
+D. Compilation fails only at line n2
+E. Compilation fails at both line n1 and line n2
+
+Ans:E
+
+pag19
+===28(A,C)===
+
+
+1. class X {
+2.      public void printFileContent() {
+3.          /* code goes here */
+4.          throw new IOException();
+5.      }
+6. }
+7. public class Test {
+8.      public static void main(String[] args) {
+9.          X xobj = new X();
+10.         xobj.printFileContent();
+11.     }
+12. }
+
+Which two modifications should you make so that the code compiles successfully?
+(哪兩個修改可以使程式碼成功編譯？)
+
+
+
+A) Replace line 8 with public static void main(String[] args) throws Exception {
+
+B) Replace line 10 with:
+
+Java
+try {
+    xobj.printFileContent();
+}
+catch(Exception e) { }
+catch(IOException e) { }
+
+C) Replace line 2 with public void printFileContent() throws IOException {
+
+D) Replace line 4 with throw new IOException("Exception raised");
+
+E) At line 11, insert throw new IOException();
+
+ANS:A 與 C
+
+pag20-21
+
+===29(B)===
+
+public class Customer {
+    ElectricAccount acct = new ElectricAccount();
+
+    public void useElectricity(double kWh) {
+        acct.addkWh(kWh);
+    }
+}
+
+public class ElectricAccount {
+    private double kWh;
+    private double rate = 0.07;
+    private double bill;
+
+    //line n1
+}
+
+Question:
+How should you write methods in the ElectricAccount class at line n1 so that the member variable bill is always equal to the value of the member variable kWh multiplied by the member variable rate?
+Any amount of electricity used by a customer (represented by an instance of the Customer class) must contribute to the customer's bill (represented by the member variable bill) through the method useElectricity method. An instance of the customer class should never be able to tamper with or decrease the value of the member variable bill.
+
+A.
+public void addkWh(double kWh) {
+    this.kWh += kWh;
+    this.bill = this.kWh * this.rate;
+}
+
+B.
+public void addkWh(double kWh) {
+    if (kWh > 0) {
+        this.kWh += kWh;
+        this.bill = this.kWh * this.rate;
+    }
+}
+
+C.
+private void addkWh(double kWh) {
+    if (kWh > 0) {
+        this.kWh += kWh;
+        this.bill = this.kWh * this.rate;
+    }
+}
+
+D.
+public void addkWh(double kWh) {
+    if (kWh > 0) {
+        this.kWh += kWh;
+        setBill(this.kWh);
+    }
+}
+public void setBill(double kWh) {
+    bill = kWh * rate;
+}
+
+
+
+ANS:B
+
+
+pag21
+
+
+===30(B)===
+
+QUESTION 10
+Given the code fragment:
+
+public static void main(String[] args) {
+    StringBuilder sb = new StringBuilder(5);
+    String s = "";
+
+    if (sb.equals(s)) {
+        System.out.println("Match 1");
+    } else if (sb.toString().equals(s.toString())) {
+        System.out.println("Match 2");
+    } else {
+        System.out.println("No Match");
+    }
+}
+
+What is the result?
+A. Match 1
+B. Match 2
+C. No Match
+D. A NullPointerException is thrown at runtime.
+
+ANS:B
+
+
+pag22
+
+===31(D)===
+
+interface Readable {
+    public void readBook();
+    public void setBookMark();
+}
+
+abstract class Book implements Readable {   // line n1
+    public void readBook() { }
+    // line n2
+}
+
+class EBook extends Book {                  // line n3
+    public void readBook() { }
+    // line n4
+}
+
+And given the code fragment:
+
+Book book1 = new EBook();
+book1.readBook();
+
+Which option enables the code to compile? (哪一個選項能使程式碼成功編譯？)
+
+A) Replace the code fragment at line n1 with:
+class Book implements Readable {
+
+B) At line n2 insert:
+public abstract void setBookMark();
+
+C) Replace the code fragment at line n3 with:
+abstract class EBook extends Book {
+
+D) At line n4 insert:
+public void setBookMark() { }
+
+ANS:D
+
+pag23
+
+===32(C)===
+
+QUESTION 12
+Given:
+
+public static void main(String[] args) {
+    String ta = "A ";
+    ta = ta.concat("B ");
+    String tb = "C ";
+    ta = ta.concat(tb);
+    ta.replace('C', 'D');
+    ta = ta.concat(tb);
+    System.out.println(ta);
+}
+
+What is the result?
+A. A B C D
+B. A C D
+C. A B C C
+D. A B D
+E. A B D C
+
+
+ANS:C
+
+pag24
+
+===33(C)===
+
+class CD {
+    int r;
+    CD(int r) {
+        this.r = r;
+    }
+}
+
+class DVD extends CD {
+    int c;
+    DVD(int r, int c) {
+        // line n1
+    }
+}
+
+And given the code fragment:
+
+DVD dvd = new DVD(10, 20);
+
+Which code fragment should you use at line n1 to instantiate the dvd object successfully?
+(在 line n1 應該使用哪段程式碼來成功實例化 dvd 物件？)
+
+
+A)
+super.r = r;
+this.c = c;
+
+B)
+super(r);
+this(c);
+
+C)
+super(r);
+this.c = c;
+
+D)
+this.c = r;
+super(c);
+
+ANS:C
+
+pag25
+
+===34(B)===
+
+QUESTION 14
+Given the code fragment:
+
+int a[] = {1, 2, 3, 4, 5};
+for(XXX) {
+    System.out.print(a[e]);
+}
+
+Which option can replace xxx to enable the code to print 135?
+
+A. int e = 0; e <= 4; e++
+
+B. int e = 0; e < 5; e += 2
+
+C. int e = 1; e <= 5; e += 1
+
+D. int e = 1; e < 5; e += 2
+
+ANS:B
+
+
+
+===35(A)===
+
+Which statement best describes encapsulation?
+
+A. Encapsulation ensures that classes can be designed so that only certain fields and methods of an object are accessible from other objects.
+
+B. Encapsulation ensures that classes can be designed so that their methods are inheritable.
+
+C. Encapsulation ensures that classes can be designed with some fields and methods declared as abstract.
+
+D. Encapsulation ensures that classes can be designed so that if a method has an argument MyType x, any subclass of MyType can be passed to that method.
+
+ANS:A
+
+
+===36(E)===
+
+QUESTION 16
+Given the code fragment from three files:
+
+SalesMan.java:
+
+
+package sales;
+public class SalesMan { }
+
+Product.java:
+
+package sales.products;
+public class Product { }
+
+Market.java:
+
+1. package market;
+2. // insert code here
+3. public class USMarket {
+4.      SalesMan sm;
+5.      Product p;
+6. }
+
+Which code fragment, when inserted at line 2, enables the code to compile?
+
+A) import sales.*;
+
+B) import java.sales.products.*;
+
+C) import sales;
+import sales.products;
+
+D) import sales.*;
+import products.*;
+
+E) import sales.*;
+import sales.products.*;
+
+ANS:E
+
+pag26
+
+===37(D,G,H)===
+
+QUESTION 17
+
+Given the following class:
+
+public class CheckingAccount {
+    public int amount;
+    public CheckingAccount(int amount) {
+        this.amount = amount;
+    }
+    public int getAmount() {
+        return amount;
+    }
+    public void changeAmount(int x) {
+        amount += x;
+    }
+}
+
+And given the following main method, located in another class:
+
+public static void main(String[] args) {
+    CheckingAccount acct = new CheckingAccount((int) (Math.random() * 1000));
+    // line n1
+    System.out.println(acct.getAmount());
+}
+
+Which three lines, when inserted independently at line n1, cause the program to print a 0 balance? (哪三行程式碼分別插入 line n1 時，會使程式印出 0？)
+
+A. this.amount = 0;
+
+B. amount = 0;
+
+C. acct(0);
+
+D. acct.amount = 0;
+
+E. acct.getAmount() = 0;
+
+F. acct.changeAmount(0);
+
+G. acct.changeAmount(-acct.amount);
+
+H. acct.changeAmount(-acct.getAmount());
+
+ANS:DGE
+
+pag27
+
+===38(D)===
+
+QUESTION 18
+Given the code fragment:
+
+String shirts[][] = new String[2][2];
+shirts[0][0] = "red";
+shirts[0][1] = "blue";
+shirts[1][0] = "small";
+shirts[1][1] = "medium";
+
+Which code fragment prints red: blue: small: medium:?
+A
+for (int index = 1; index < 2; index++) {
+    for (int idx = 1; idx < 2; idx++) {
+        System.out.print(shirts[index][idx] + ":");
+    }
+}
+
+B
+
+for (int index = 0; index < 2; ++index) {
+    for (int idx = 0; idx < index; ++idx) {
+        System.out.print(shirts[index][idx] + ":");
+    }
+}
+
+C
+for (String c : colors) {
+    for (String s : sizes) {
+        System.out.println(s + ":");
+    }
+}
+
+D
+for (int index = 0; index < 2;) {
+    for (int idx = 0; idx < 2;) {
+        System.out.print(shirts[index][idx] + ":");
+        idx++;
+    }
+    index++;
+}
+
+ANS:D
+
+pag28
+
+===39(D)===
+
+QUESTION 19
+Given the code fragment:
+
+public class Test {
+
+    void readCard(int cardNo) throws Exception {
+        System.out.println("Reading Card");
+    }
+
+    void checkCard(int cardNo) throws RuntimeException { // line n1
+        System.out.println("Checking Card");
+    }
+
+    public static void main(String[] args) {
+        Test ex = new Test();
+        int cardNo = 12344;
+        ex.checkCard(cardNo);      // line n2
+        ex.readCard(cardNo);       // line n3
+    }
+
+}
+
+What is the result?
+
+A. Reading Card
+Checking Card
+
+B. Compilation fails only at line n1.
+
+C. Compilation fails only at line n2.
+
+D. Compilation fails only at line n3.
+
+E. Compilation fails at both line n2 and line n3.
+?
+
+ANS：D
+
+===40(B)===
+
+Given the code fragment:
+
+?3.  public static void main(String[] args) {
+5.      int x = 5;
+6.      while (isAvailable(x)) {
+8.          System.out.println(x);
+9.      }
+10.  }
+11. public static boolean isAvailable(int x) { 
+12. 	return x-- > 0 ? true : false; 
+13.}
+
+Which modification enables the code to print 54321?
+
+A. Replace line 6 with System.out.print (--x);
+B. At line 7, insert x--;
+C. Replace line 6 with --x; and, at line 7, insert System.out.print (x);
+D. Replace line 12 with return (x > 0) ? false : true;
+
+ANS：B
+
+pag29
+
+===41(A)===
+
+QUESTION 21
+Given the code fragment:
+
+4.  public static void main(String[] args) {
+5.      boolean opt = true;
+6.      switch (opt) {
+7.          case true:
+8.              System.out.print("True");
+9.          break;
+10.         default:
+11.             System.out.print("****");
+12.     }
+13.     System.out.println("Done");
+14. }
+
+Which modification enables the code fragment to print TrueDone?
+
+A. Replace line 5 with String opt = "true"; Replace line 7 with case "true":
+B. Replace line 5 with boolean opt = 1; Replace line 7 with case 1:
+C. At line 9, remove the break statement.
+D. Remove the default section.
+
+ANS：A
+
+===41(D)===
+
+QUESTION 22
+Given the following main method:
+
+public static void main(String[] args) {
+    int num = 5;
+    do {
+        System.out.print(num-- + " ");
+    } while (num == 0);
+}
+
+What is the result?
+
+A. 5 4 3 2 1 0 printed
+B. 5 4 3 2 1 printed
+C. 4 2 1 printed
+D. 5 printed
+E. Nothing is printed
+
+ANS：D
+
+===43(E)===
+
+pag30
+
+QUESTION 23
+Given the code fragment:
+
+java
+int x = 100;
+int a = x++;
+int b = x++;
+int d = (a < b) ? (a < c ? a : b < c ? b : c) : a;
+System.out.println(d);
+
+What is the result?
+
+A. 100
+B. 101
+C. 102
+D. 103 
+E. Compilation fails
+
+ANS：E
+
+===44(A)===
+
+QUESTION 24
+
+public class Test {
+
+    public static void main(String[] args) {
+
+        String[][] chs = new String[2][]; 
+        chs[0] = new String[2]; 
+        chs[1] = new String[5]; 
+        int i = 97; 
+
+       for (int a = 0; a < chs.length; a++) {
+            for (int b = 0; b < chs.length; b++) {               
+                
+                chs[a][b] = "" + i; 
+                i++; 
+            }
+        }
+
+       for (String[] ca : chs) {            
+            for (String c : ca) {                 
+                System.out.print(c + " "); 
+            }
+             System.out.println(); 
+        }
+    }
+}
+
+A. 
+97 98
+99 100 null null null
+
+B. 
+97 98
+99 100 101 102 103
+
+C. Compilation fails.
+
+D. A NullPointerException is thrown at runtime.
+
+E. An ArrayIndexOutOfBoundsException is thrown at runtime.
+
+ANS：A
+
+===45(A,C)===
+
+QUESTION 25
+
+public class Employee {
+    String name;
+    boolean contract;
+    double salary;
+
+    Employee() {
+        // line n1
+    }
+
+    public String toString() {
+        return name + ":" + contract + ":" + salary;
+    }
+
+    public static void main(String[] args) {
+        Employee e = new Employee();
+        // line n2
+        System.out.print(e);
+    }
+}
+
+Which two modifications, when made independently, enable the code to print joe:true: 100.0?
+A) 
+Replace line n2 with:
+e.name = "Joe";
+e.contract = true;
+e.salary = 100;
+B) 
+Replace line n2 with:
+this.name = "Joe";
+this.contract = true;
+this.salary = 100;
+C)
+Replace line n1 with:
+this.name = new String("Joe");
+this.contract = new Boolean(true);
+this.salary = new Double(100);
+D) 
+Replace line n1 with:
+name = "Joe";
+contract = TRUE;
+salary = 100.0f;
+E) 
+Replace line n1 with:
+this("Joe", true, 100);
+
+ANS：AC
+
+pag32
+
+===46(A)===
+
+QUESTION 26
+
+public static void main(String[] args) {    
+    List<String> names = new ArrayList<>();
+    
+    names.add("Robb");
+    names.add("Bran");
+    names.add("Rick");
+    names.add("Bran");
+   
+    if (names.remove("Bran")) { 
+       names.remove("Jon"); 
+    }
+    System.out.println(names);
+}
+
+What is the result?
+
+A. [Robb, Rick, Bran]
+
+B. [Robb, Rick]
+
+C. [Robb, Bran, Rick, Bran]
+
+D. An exception is thrown at runtime.
+
+ANS：A
+
+===47(C)===
+
+QUESTION 27
+
+class A {
+    public A() {
+        System.out.print("A ");
+    }
+}
+
+class B extends A {
+    public B() {                // line n1
+        System.out.print("B ");
+    }
+}
+
+class C extends B {
+    public C() {                // line n2
+        System.out.print("C ");
+    }
+    public static void main(String[] args) {
+        C c = new C();
+    }
+}
+
+
+A. C B A
+B. C
+C. A B C
+D. Compilation fails at line n1 and line n2
+
+ANS：C
+
+pag34
+
+===48(C)===
+
+QUESTION 28
+
+class X {
+    static int i; 
+    int j;        
+
+    public static void main(String[] args) {
+        X x1 = new X();
+        X x2 = new X();
+        
+        x1.i = 3; 
+        x1.j = 4;
+        x2.i = 5; 
+        x2.j = 6;
+        System.out.println(
+            x1.i + " " + 
+            x1.j + " " + 
+            x2.i + " " + 
+            x2.j);
+    }
+}
+
+A. 3 4 5 6
+B. 3 4 3 6
+C. 5 4 5 6
+D. 3 6 4 6
+
+
+ANS：C
+
+===49(B)===
+
+QUESTION 29
+
+public class Test {
+    public static void main(String[] args) {
+        /* insert code here (第 3 行) 
+        array[0] = 10; 
+        array[1] = 20; 
+        System.out.print(array[0] + ":" + array[1]);
+    }
+}
+
+Which code fragment, when inserted at line 3, enables the code to print 10:20?
+（哪一段程式碼插入第 3 行後，能讓程式印出 10:20？）
+
+A. int[] array n = new int[2];
+B. int[] array; array = int[2];
+C. int array[] = new int[2];
+D. int array [2];
+
+
+ANS：B
+
+pag35
+
+===50(C)===
+
+QUESTION 30
+
+public static void main(String[] args) {
+    String[] arr = {"A", "B", "C", "D"};
+    for (int i = 0; i < arr.length; i++) {
+        System.out.print(arr[i] + " ");
+        if (arr[i].equals("C")) {
+            continue;
+        }
+        System.out.println("Work done");
+        break;
+    }
+}
+
+A. A B C Work done
+B. A B C D Work done
+C. A Work done
+D. Compilation fails
+
+ANS：C
+
+===51(A,C,D)===
+
+QUESTION 31
+
+Which three are advantages of the Java exception mechanism?
+(哪三項是 Java 異常處理機制的優點？)
+
+A. Improves the program structure because the error handling code is separated from the normal program function.
+
+B. Provides a set of standard exceptions that covers all the possible errors.
+
+C. Improves the program structure because the programmer can choose where to handle exceptions.
+
+D. Improves the program structure because exceptions must be handled in the method in which they occurred.
+
+E. Allows the creation of new exceptions that are tailored to the particular program being created.
+
+
+ANS：ACD  OR  ACE<AI>
+
+
+==52(C)===
+
+QUESTION 32
+
+public class Greeting {
+    public static void main(String[] args) {
+        System.out.println("Hello " + args[0]);
+    }
+}
+
+
+A) javac Greeting
+   java Greeting Duke
+
+B) javac Greeting.java Duke 
+   java Greeting
+
+C) javac Greeting.java 
+   java Greeting Duke
+
+D) javac Greeting.java
+   java Greeting.class Duke
+
+ANS：C
+
+pag36
+
+===53(B)===
+
+QUESTION 33 
+
+Given: 
+
+class Alpha {
+    int ns;
+    static int s;
+    Alpha (int ns) {
+        if (s < ns) {
+            s = ns;
+        }
+        this.ns = ns;
+    }
+    void doPrint() {
+        System.out.println("ns = " + ns + " s = " + s);
+    }
+}
+
+public class TestA {
+    public static void main(String[] args) {
+        Alpha ref1 = new Alpha (50);
+        Alpha ref2 = new Alpha (125);
+        Alpha ref3 = new Alpha (100);
+        ref1.doPrint();
+        ref2.doPrint();
+        ref3.doPrint();
+    }
+}
+
+What is the result? 
+
+A) ns = 50 s = 125, ns = 125 s = 125, ns = 100 s = 125 
+B) ns = 50 s = 50, ns = 125 s = 125, ns = 100 s = 100  (註：此處選項內容依據圖表邏輯對應)
+C) ns = 50 s = 125, ns = 125 s = 125, ns = 0 s = 125 
+D) ns = 50 s = 50, ns = 125 s = 125, ns = 100 s = 125 
+
+Correct Answer: B
+
+===54(A)===
+
+QUESTION 35
+
+Given the code fragment: 
+
+JavaLocalDate date1 = LocalDate.now();
+LocalDate date2 = LocalDate.of(2014, 6, 20);
+LocalDate date3 = LocalDate.parse("2014-06-20", DateTimeFormatter.ISO_DATE);
+System.out.println("date1 = " + date1);
+System.out.println("date2 = " + date2);
+System.out.println("date3 = " + date3);
+
+Assume that the system date is June 20, 2014. What is the result?
+A) date1 = 2014-06-20, date2 = 2014-06-20, date3 = 2014-06-20 
+B) date1 = 06/20/2014, date2 = 2014-06-20, date3 = Jun 20, 2014 
+C) Compilation fails. D) A DateParseException is thrown at runtime. 
+
+Correct Answer: A
+ 
+===55(A)===
+
+QUESTION 36 
+
+Given the code fragment:
+
+7.  StringBuilder sb1 = new StringBuilder("Duke");
+8.  String str1 = sb1.toString();
+9.  // insert code here
+10. System.out.print(str1 == str2);
+
+Which code fragment, when inserted at line 9, enables the code to print true? 
+A. String str2 = str1; 
+B. String str2 = new String (str1); 
+C. String str2 = sb1.toString(); 
+D. String str2 = "Duke"; 
+
+Correct Answer: A 
+
+===56(A)===
+
+QUESTION 37 
+
+Given the code fragment: 
+
+public class Test {
+    static int count = 0;
+    int i = 0;
+    public void changeCount() {
+        while (i < 5) {
+            i++;
+            count++;
+        }
+    }
+    public static void main(String[] args) {
+        Test check1 = new Test();
+        Test check2 = new Test();
+        check1.changeCount();
+        check2.changeCount();
+        System.out.print(check1.count + ":" + check2.count);
+    }
+}
+
+What is the result?
+A. 10:10 
+B. 5:5 
+C. 5:10 
+D. Compilation fails 
+
+Correct Answer: A 
+
+===57(A,C)===
+
+QUESTION 38 
+
+Given the code fragment:
+
+public static void main(String[] args) {
+    double discount = 0;
+    int qty = Integer.parseInt(args[0]);
+    // line n1;
+}
+And given the requirements: 
+If the value of the qty variable is greater than or equal to 90, discount = 0.5 
+If the value of the qty variable is between 80 and 90, discount = 0.2 
+
+Which two code fragments can be independently placed at line n1 to meet the requirements? 
+
+A) if (qty >= 90) { discount = 0.5; } if (qty > 80 && qty < 90) { discount = 0.2; } B) discount = (qty >= 90) ? 0.5 : 0; discount = (qty > 80) ? 0.2 : 0; 
+C) discount = (qty >= 90) ? 0.5 : (qty > 80) ? 0.2 : 0; 
+D) if (qty > 80 && qty < 90) { discount = 0.2; } else { discount = 0; } if (qty >= 90) { discount = 0.5; } else { discount = 0; } 
+E) discount = (qty > 80) ? 0.2 : (qty >= 90) ? 0.5 : 0;
+
+Correct Answer: AC 
+
+===58(B,C,E)===
+
+QUESTION 40 
+
+Which three statements describe the object-oriented features of the Java language? 
+
+A. Objects cannot be reused. 
+B. A subclass can inherit from a superclass. 
+C. Objects can share behaviors with other objects.
+D. A package must contain more than one class. 
+E. Object is the root class of all other objects. 
+F. A main method must be declared in every class. 
+
+Correct Answer: BCE 
+
+===59(E)===
+
+QUESTION 41 
+
+public static void main(String[] args) {
+    String[] planets = {"Mercury", "Venus", "Earth", "Mars"};
+    System.out.println(planets.length);
+    System.out.println(planets[1].length());
+}
+
+What is the output? 
+
+A. 4, 4 
+B. 3, 5 
+C. 4, 7 
+D. 5, 4 
+E. 4, 5 
+F. 4, 21 
+
+Correct Answer: E 
+
+===60(B,C)===
+
+QUESTION 42 
+
+Given the code fragment: 
+
+class CCMask {
+    public static String maskCC(String creditCard) {
+        String x = "XXXX-XXXX-XXXX-";
+        // line n1
+    }
+    public static void main(String[] args) {
+        System.out.println(maskCC("1234-5678-9101-1121"));
+    }
+}
+
+You must ensure that the maskCC method returns a string that hides all digits except the four last digits (and hyphens). 
+
+Which two code fragments should you use at line n1?
+
+A) StringBuilder sb = new StringBuilder (creditCard); sb.substring (15, 19); return x + sb; 
+
+B) return x + creditCard.substring(15, 19); 
+
+C) StringBuilder sb = new StringBuilder(x); sb.append (creditCard, 15, 19); return sb.toString(); 
+
+D) StringBuilder sb = new StringBuilder (creditCard); StringBuilder s = sb.insert (0, x); return s.toString(); 
+
+Correct Answer: BC
+ 
+===61(C)===
+
+QUESTION 43 
+
+Given: 
+
+package p1;
+public class Acc {
+    int p;
+    private int q;
+    protected int r;
+    public int s;
+}
+
+Test.java:
+
+package p2;
+import p1.Acc;
+public class Test extends Acc {
+    public static void main(String[] args) {
+        Acc obj = new Test();
+    }
+}
+
+Which statement is true? 
+A. Both p and s are accessible by obj. 
+B. Only s is accessible by obj. 
+C. Both r and s are accessible by obj. 
+D. p, r, and s are accessible by obj. 
+
+Correct Answer: C
+
+===62(C)=== 
+
+QUESTION 44
+ 
+Given:
+
+class Base {
+    public void test() { System.out.println("Base"); }
+}
+
+DerivedA.java:
+
+class DerivedA extends Base {
+    public void test() { System.out.println("DerivedA "); }
+}
+DerivedB.java:
+
+class DerivedB extends DerivedA {
+    public void test() { System.out.println("DerivedB "); }
+    public static void main(String[] args) {
+        Base b1 = new DerivedB();
+        Base b2 = new DerivedA();
+        Base b3 = new DerivedB();
+        b1 = (Base) b3;
+        Base b4 = (DerivedA) b3;
+        b1.test();
+        b4.test();
+    }
+}
+
+What is the result? 
+A. Base, DerivedA 
+B. Base, DerivedB 
+C. DerivedB, DerivedB 
+D. DerivedB, DerivedA 
+E. A ClassCastException is thrown at runtime. 
+Correct Answer: C 
+
+===63(D)===
+
+QUESTION 46
+ 
+Given: 
+
+System.out.println("5 + 2 = " + 3 + 4);
+System.out.println("5 + 2 = " + (3 + 4));
+
+What is the result? 
+
+A) 5 + 2 = 34, 5 + 2 = 34 
+B) 5 + 2 = 3 + 4, 5 + 2 = 7 
+C) 7 = 7, 7 + 7 
+D) 5 + 2 = 34, 5 + 2 = 7
+
+Correct Answer:D 
+
+===64(C)===
+
+QUESTION 47 
+
+Given the code fragments: 
+
+Person.java
+public class Person {
+    String name;
+    int age;
+    public Person(String n, int a) { name = n; age = a; }
+    public String getName() { return name; }
+    public int getAge() { return age; }
+}
+
+Test.java:
+
+public static void checkAge(List<Person> list, Predicate<Person> predicate) {
+    for (Person p : list) {
+        if (predicate.test(p)) {
+            System.out.println(p.name + " ");
+        }
+    }
+}
+
+public static void main(String[] args) {
+    List<Person> iList = Arrays.asList(new Person("Hank", 45), new Person("Charlie", 40), new Person("Smith", 38));
+    // line n1
+}
+
+Which code fragment, when inserted at line n1, enables the code to print Hank? 
+
+A. checkAge(iList, () -> p.getAge() > 40);
+B. checkAge(iList, Person p -> p.getAge() > 40); 
+C. checkAge(iList, p -> p.getAge() > 40); 
+D. checkAge(iList, (Person p) -> { p.getAge() > 40; });
+
+Correct Answer: C 
+
+QUESTION 48 
+Given the code fragment: 
+
+public static void main(String[] args) {
+    String[][] arr = {{"A", "B", "C"}, {"D", "E"}};
+    for (int i = 0; i < arr.length; i++) {
+        for (int j = 0; j < arr[i].length; j++) {
+            System.out.print(arr[i][j] + " ");
+            if (arr[i][j].equals("B")) {
+                break;
+            }
+        }
+        continue;
+    }
+}
+What is the result? 
+A. ABC 
+B. ABCDE 
+C. ABDE 
+D. Compilation fails.
+ 
+Correct Answer: C
+
+===66(C)===
+
+QUESTION 49 
+Given the code fragment: 
+
+public static void main(String[] args) {
+    String str = " ";
+    str.trim();
+    System.out.println(str.equals("") + " " + str.isEmpty());
+}
+
+What is the result? 
+A. true true 
+B. true false 
+C. false false 
+D. false true 
+
+Correct Answer: C 
+
+===67(B)===
+
+QUESTION 50 
+
+Given the code fragment: 
+
+public class App {
+    public static void main(String[] args) {
+        String str1 = "Java";
+        String str2 = new String("java");
+        // line n1
+        { System.out.println("Equal"); }
+        else { System.out.println("Not Equal"); 
+	}
+    }
+}
+
+Which code fragment enables the App class to print Equal? 
+
+A) String str3 = str2; if (str1 == str3) 
+B) if (str1.equalsIgnoreCase(str2)) 
+C) String str3 = str2; if (str1.equals(str3)) 
+D) if (str1.toLowerCase() == str2.toLowerCase()) 
+
+Correct Answer: B 
+
+===68(B)===
+
+QUESTION 51
+
+Given:
+
+apublic class SumTest {
+    public static void doSum(Integer x, Integer y) { 
+	System.out.println("Integer sum is " + (x + y)); 
+}
+    public static void doSum(double x, double y) { 
+	System.out.println("double sum is " + (x + y)); 
+}
+    public static void doSum(float x, float y) { 
+	System.out.println("float sum is " + (x + y)); 
+}
+    public static void doSum(int x, int y) { 
+	System.out.println("int sum is " + (x + y)); }
+
+    public static void main(String[] args) {
+        doSum(10, 20);
+        doSum(10.0, 20.0);
+    }
+}
+
+What is the result?
+A) int sum is 30, float sum is 30.0
+B) int sum is 30, double sum is 30.0
+C) Integer sum is 30, double sum is 30.0
+D) Integer sum is 30, float sum is 30.0
+
+Correct Answer: B
+
+===69(D)===
+
+QUESTION 52
+
+Given the code fragment:
+
+String[] strs = new String[2];
+int idx = 0;
+for (String s : strs) {
+    strs[idx].concat(" element " + idx);
+    idx++;
+}
+for (idx = 0; idx < strs.length; idx++) {
+    System.out.println(strs[idx]);
+}
+
+What is the result?
+
+A. Element 0, Element 1
+B. Null element 0, Null element 1
+C. Null, Null
+D. A NullPointerException is thrown at runtime.
+
+Correct Answer: D
+
+===70(D)===
+
+QUESTION 53
+
+Given:
+
+class Vehicle {
+    int x;
+    Vehicle() { this(10); } // line n1
+    Vehicle(int x) { this.x = x; }
+}
+class Car extends Vehicle {
+    int y;
+    Car() { super(); this(20); } // line n2
+    Car(int y) { this.y = y; }
+    public String toString() { return super.x + ":" + this.y; }
+}
+
+And given the code fragment:
+
+Vehicle y = new Car();
+System.out.println(y);
+
+What is the result?
+A. 10:2
+0B. 0:20
+C. Compilation fails at line n1
+D. Compilation fails at line n2
+
+Correct Answer: D 
+(註：super() 與 this() 不能同時出現在一個建構子中)
+
+===71(C)===
+
+QUESTION 54
+
+MyString.java
+
+package p1;
+
+class MyString {
+    String msg;
+    MyString(String msg) {
+        this.msg = msg;
+    }
+}
+
+Test.java
+
+package p1;
+
+public class Test {
+    public static void main(String[] args) {
+        System.out.println("Hello " + new StringBuilder("Java SE 8"));
+        System.out.println("Hello " + new MyString("Java SE 8"));
+    }
+}
+
+What is the result?
+
+A：
+Hello Java SE 8
+Hello Java SE 8
+
+B：
+Hello java.lang.StringBuilder@<<hashcode1>>
+Hello p1.MyString@<<hashcode2>>
+
+C：
+Hello Java SE 8
+Hello p1.MyString@<<hashcode>>
+
+D：
+Compilation fails at the Test class.
+
+Correct Answer: C
+
+===72(A,D,F)===
+
+QUESTION 55
+
+3.  public static void main(String[] args) {
+4.      int iVar = 100;
+5.      float fVar = 100.100f;
+6.      double dVar = 123;
+7.      iVar = fVar;
+8.      fVar = iVar;
+9.      dVar = fVar;
+10.     fVar = dVar;
+11.     dVar = iVar;
+12.     iVar = dVar;
+13. }
+
+Which three lines fail to compile?
+
+A. Line 7
+B. Line 8
+C. Line 9
+D. Line 10E. Line 11F. Line 12
+
+Correct Answer: ADF
+
+===73(C)===
+
+QUESTION 56
+
+Given:Javapublic class MainTest {
+
+    public static void main(int[] args) {
+	System.out.println("int main " + args[0]);
+ }
+    public static void main(Object[] args) { 
+	ystem.out.println("Object main " + args[0]);
+ }
+    public static void main(String[] args) {
+	System.out.println("String main " + args[0]);
+ }
+}
+
+and commands:
+
+javac MainTest.java
+java MainTest 1 2 3
+
+What is the result?
+
+A. int main 1
+B. Object main 1
+C. String main 1
+D. Compilation fails
+E. An exception is thrown at runtime
+
+Correct Answer: C
+
+===74(A)===
+
+CQUESTION 57
+
+Given the code fragment:
+
+int num[][] = new int[1][3];
+for (int i = 0; i < num.length; i++) {
+    for (int j = 0; j < num[i].length; j++) {
+        num[i][j] = 10;
+    }
+}
+
+Which option represents the state of the num array?
+
+A) num[0][0]=10, num[0][1]=10, num[0][2]=10
+B) num[0][0]=10, num[1][0]=10, num[2][0]=10
+C) num[0][0]=10, num[0][1]=0, num[0][2]=0
+D) num[0][0]=10, num[0][1]=10, num[0][2]=10, num[0][3]=10 ... (等多個索引)
+
+Correct Answer: A
+
+
+===75(D)===
+
+CQUESTION 58
+
+   public class Person{
+	String name;
+	int age = 25;
+
+   public Person(String name){
+  	this();
+	setName(name);
+  }
+  
+  public Person(String name,int age){
+  	Person(name);
+	setAge(age);
+  }
+
+  //setter and getter methods go here
+
+  public String show(){
+	return name+" "+age+" "+number;
+  }
+  public static void main(String[] args){
+	Person p1 = new Person("Jesse");
+	Person p2 = new Person("Walter",52);
+	System.out.println(p1.show());
+	System.out.println(p2.show());
+  }
+}
+
+What is the result?
+
+A. 
+Jesse 25
+Walter 52
+B. Compilation fails only at line n1
+C. Compilation fails only at line n2
+D. Compilation fails only at line n1 and line n2
+
+ANS:D
+
+===76(C)===
+
+QUESTION 59
+
+Given the following code for a Planet object:
+
+public class Planet {
+    public String name;
+    public int moons;
+
+    public Planet(String name, int moons) {
+        this.name = name;
+        this.moons = moons;
+    }
+}
+
+And the following main method:
+
+public static void main(String[] args) {
+    Planet[] planets = {
+        new Planet("Mercury", 0),
+        new Planet("Venus", 0),
+        new Planet("Earth", 1),
+        new Planet("Mars", 2)
+    };
+
+    System.out.println(planets);
+    System.out.println(planets[2]);
+    System.out.println(planets[2].moons);
+}
+
+What is the output?
+
+A)
+planets
+Earth
+1
+
+B)
+[LPlanets.Planet;@15db9742
+Earth
+1
+
+C)
+[LPlanets.Planet;@15db9742
+Planets.Planet@6d06d69c
+1
+
+D)
+[LPlanets.Planet;@15db9742
+Planets.Planet@6d06d69c
+[LPlanets.Moon;@7852e922
+
+E)
+[LPlanets.Planet;@15db9742
+Venus
+0
+
+ANS:C
+
+===77(A)===
+
+QUESTION 60
+
+You are asked to develop a program for a shopping application, and you are given the following information:
+
+The application must contain the classes Toy, EduToy, and ConsToy. The Toy class is the superclass of the other two classes.
+
+The int calculatePrice (Toy t) method calculates the price of a toy.
+
+The void printToy (Toy t) method prints the details of a toy.
+
+Which definition of the Toy class adds a valid layer of abstraction to the class hierarchy?
+
+A)
+
+Java
+public abstract class Toy {
+    public abstract int calculatePrice(Toy t);
+    public void printToy(Toy t) { /* code goes here */ }
+}
+B)
+
+Java
+public abstract class Toy {
+    public int calculatePrice(Toy t) ;
+    public void printToy(Toy t) ;
+}
+C)
+
+Java
+public abstract class Toy {
+    public int calculatePrice(Toy t);
+    public final void printToy(Toy t) { /* code goes here */ }
+}
+D)
+
+Java
+public abstract class Toy {
+    public abstract int calculatePrice(Toy t) { /* code goes here */ }
+    public abstract void printToy(Toy t) { /* code goes here */ }
+}
+
+===78(C)===
+
+QUESTION 61
+
+Given the following code:
+
+int[] intArr = {15,30,45,60,75};
+intArr[2] = intArr[4];
+intArr[4] = 90;
+
+What are the values of each element in inArr after this code has executes?
+
+A. 15,60,45,90,75
+B. 15,90,45,90,75
+C. 15,30,75,60,90
+E. 15,30,90,60,90
+D. 15,4,45,60,90
+
+ANS:C
