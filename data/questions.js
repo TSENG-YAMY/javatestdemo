@@ -909,6 +909,23 @@ window.QUESTIONS_DATA = [
     "explanation": ""
   },
   {
+    "id": 52,
+    "type": "single",
+    "question": "<pre class=\"line-numbers line-hight19\"><code class=\"language-csharp\">public class Greeting {\n    public static void main(String[] args) {\n        System.out.println(\"Hello \" + args[0]);\n    }\n}</code></pre>\nWhich set of commands prints Hello Duke?",
+    "options": [
+      "javac Greeting\njava Greeting Duke",
+      "javac Greeting.java Duke\njava Greeting",
+      "javac Greeting.java\njava Greeting Duke",
+      "javac Greeting.java\njava Greeting.class Duke"
+    ],
+    "answer": [
+      3
+    ],
+    "weight": 1,
+    "image": null,
+    "explanation": ""
+  },
+  {
     "id": 53,
     "type": "single",
     "question": "Given:\n<pre class=\"line-numbers line-hight19\"><code class=\"language-csharp\">class Alpha {\n    int ns;\n    static int s;\n    Alpha (int ns) {\n        if (s &lt; ns) {\n            s = ns;\n        }\n        this.ns = ns;\n    }\n    void doPrint() {\n        System.out.println(&quot;ns = &quot; + ns + &quot; s = &quot; + s);\n    }\n}\n\npublic class TestA {\n    public static void main(String[] args) {\n        Alpha ref1 = new Alpha (50);\n        Alpha ref2 = new Alpha (125);\n        Alpha ref3 = new Alpha (100);\n        ref1.doPrint();\n        ref2.doPrint();\n        ref3.doPrint();\n    }\n}</code></pre>\nWhat is the result?",
