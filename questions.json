@@ -942,7 +942,10 @@
     ],
     "question": "Given:\n\nclass Vehicle {\n    int x;\n    Vehicle() { this(10); } // line n1\n    Vehicle(int x) { this.x = x; }\n}\nclass Car extends Vehicle {\n    int y;\n    Car() { super(); this(20); } // line n2\n    Car(int y) { this.y = y; }\n    public String toString() { return super.x + \":\" + this.y; }\n}\n\nAnd given the code fragment:\n\nVehicle y = new Car();\nSystem.out.println(y);\n\nWhat is the result?",
     "options": {
-      "A": "10:2\n0B. 0:20\nC. Compilation fails at line n1\nD. Compilation fails at line n2"
+      "A": "10:2",
+      "B": "0:20",
+      "C": "Compilation fails at line n1",
+      "D": "Compilation fails at line n2"
     }
   },
   {
@@ -970,7 +973,9 @@
       "A": "Line 7",
       "B": "Line 8",
       "C": "Line 9",
-      "D": "Line 10E. Line 11F. Line 12"
+      "D": "Line 10",
+      "E": "Line 11",
+      "F": "Line 12"
     }
   },
   {
