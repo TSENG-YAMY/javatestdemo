@@ -871,6 +871,19 @@
     }
   },
   {
+  "id": 65,
+  "answers": [
+    "C"
+  ],
+  "question": "Given the code fragment: \n\npublic static void main(String[] args) {\n\n    String[][] arr = {{\"A\", \"B\", \"C\"}, {\"D\", \"E\"}};\n\n    for (int i = 0; i < arr.length; i++) {\n\n        for (int j = 0; j < arr[i].length; j++) {\n\n            System.out.print(arr[i][j] + \" \");\n\n            if (arr[i][j].equals(\"B\")) {\n\n                break;\n\n            }\n\n        }\n\n        continue;\n\n    }\n\n}\n\nWhat is the result?",
+  "options": {
+    "A": "ABC",
+    "B": "ABCDE",
+    "C": "AB DE",
+    "D": "Compilation fails."
+    }
+  },
+  {
     "id": 66,
     "answers": [
       "C"
