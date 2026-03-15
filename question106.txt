@@ -2027,6 +2027,8 @@ D. checkAge(iList, (Person p) -> { p.getAge() > 40; });
 
 Correct Answer: C 
 
+===65(C)===
+
 QUESTION 48 
 Given the code fragment: 
 
