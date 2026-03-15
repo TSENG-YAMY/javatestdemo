@@ -1229,7 +1229,7 @@ window.QUESTIONS_DATA = [
     "type": "single",
     "question": "Given:\n<pre class=\"line-numbers line-hight19\"><code class=\"language-csharp\">class Vehicle {\n    int x;\n    Vehicle() { this(10); } // line n1\n    Vehicle(int x) { this.x = x; }\n}\nclass Car extends Vehicle {\n    int y;\n    Car() { super(); this(20); } // line n2\n    Car(int y) { this.y = y; }\n    public String toString() { return super.x + &quot;:&quot; + this.y; }\n}\n\nAnd given the code fragment:\n\nVehicle y = new Car();\nSystem.out.println(y);</code></pre>\nWhat is the result?",
     "options": [
-      "10:2\n0B. 0:20\nC. Compilation fails at line n1\nD. Compilation fails at line n2"
+      "A.10:2\nB. 0:20\nC. Compilation fails at line n1\nD. Compilation fails at line n2"
     ],
     "answer": [
       4
@@ -1263,7 +1263,9 @@ window.QUESTIONS_DATA = [
       "Line 7",
       "Line 8",
       "Line 9",
-      "Line 10E. Line 11F. Line 12"
+      "Line 10",
+      "Line 11",
+      "Line 12"
     ],
     "answer": [
       1,
