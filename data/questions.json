@@ -1123,6 +1123,23 @@
     "explanation": ""
   },
   {
+    "id": 65,
+    "type": "single",
+    "question": "Given the code fragment: <pre class=\"line-numbers line-hight19\"><code class=\"language-csharp\">public static void main(String[] args) {\n    String[][] arr = {{\"A\", \"B\", \"C\"}, {\"D\", \"E\"}};\n    for (int i = 0; i < arr.length; i++) {\n        for (int j = 0; j < arr[i].length; j++) {\n            System.out.print(arr[i][j] + \" \");\n            if (arr[i][j].equals(\"B\")) {\n                break;\n            }\n        }\n        continue;\n    }\n}</code></pre>\nWhat is the result?",
+    "options": [
+      "ABC",
+      "ABCDE",
+      "AB DE ",
+      "Compilation fails."
+    ],
+    "answer": [
+      3
+    ],
+    "weight": 1,
+    "image": null,
+    "explanation": ""
+  },
+  {
     "id": 66,
     "type": "single",
     "question": "Given the code fragment:\n<pre class=\"line-numbers line-hight19\"><code class=\"language-csharp\">public static void main(String[] args) {\n    String str = &quot; &quot;;\n    str.trim();\n    System.out.println(str.equals(&quot;&quot;) + &quot; &quot; + str.isEmpty());\n}</code></pre>\nWhat is the result?",
