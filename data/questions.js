@@ -1585,7 +1585,7 @@ window.QUESTIONS_DATA = [
       "More flexible and reusable code",
       "Code that is protected from extension by other classes"
     ],
-    "answer": [3, 4],
+    "answer": [2, 4],
     "weight": 1,
     "image": null,
     "explanation": ""
