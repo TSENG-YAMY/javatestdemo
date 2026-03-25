@@ -1585,7 +1585,7 @@
       "More flexible and reusable code",
       "Code that is protected from extension by other classes"
     ],
-    "answer": [4],
+    "answer": [2,4],
     "weight": 1,
     "image": null,
     "explanation": ""
