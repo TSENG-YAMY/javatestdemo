@@ -115,7 +115,7 @@
   {
     "id": 9,
     "answers": [
-      "D"
+      "C"
     ],
     "question": "Which of the following will print current time?",
     "options": {
@@ -567,7 +567,7 @@
     }
   },
   {
-    "id": 41,
+    "id": 42,
     "answers": [
       "D"
     ],
@@ -712,7 +712,7 @@
     "question": "Given: \n\nclass Alpha {\n    int ns;\n    static int s;\n    Alpha (int ns) {\n        if (s < ns) {\n            s = ns;\n        }\n        this.ns = ns;\n    }\n    void doPrint() {\n        System.out.println(\"ns = \" + ns + \" s = \" + s);\n    }\n}\n\npublic class TestA {\n    public static void main(String[] args) {\n        Alpha ref1 = new Alpha (50);\n        Alpha ref2 = new Alpha (125);\n        Alpha ref3 = new Alpha (100);\n        ref1.doPrint();\n        ref2.doPrint();\n        ref3.doPrint();\n    }\n}\n\nWhat is the result?",
     "options": {
       "A": "ns = 50 s = 125, ns = 125 s = 125, ns = 100 s = 125",
-      "B": "ns = 50 s = 50, ns = 125 s = 125, ns = 100 s = 100  (註：此處選項內容依據圖表邏輯對應)",
+      "B": "ns = 50 s = 50, ns = 125 s = 125, ns = 100 s = 100",
       "C": "ns = 50 s = 125, ns = 125 s = 125, ns = 0 s = 125",
       "D": "ns = 50 s = 50, ns = 125 s = 125, ns = 100 s = 125"
     }
@@ -1054,8 +1054,9 @@
     "options": {
       "A": "15,60,45,90,75",
       "B": "15,90,45,90,75",
-      "C": "15,30,75,60,90\nE. 15,30,90,60,90",
-      "D": "15,4,45,60,90"
+      "C": "15,30,75,60,90",
+      "D": "15,30,90,60,90",
+      "E": "15,4,45,60,90"
     }
   }
 ]
