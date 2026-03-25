@@ -1404,7 +1404,7 @@ window.QUESTIONS_DATA = [
   {
     "id": 80,
     "type": "single",
-    "question": "Given the content of three files:\nA.java:\n<pre class=\"line-numbers line-hight19\"><code class=\"language-csharp\">public class A {\n    public void a() {}\n    int a;\n}</code></pre>\nB.java:\n<pre class=\"line-numbers line-hight19\"><code class=\"language-csharp\">public class B {\n    private int doStuff() {\n        private int x = 100;\n        return x++;\n    }\n}</code></pre>\nC.java:\n<pre class=\"line-numbers line-hight19\"><code class=\"language-csharp\">import java.io.*;\npackage p1;\nclass A {\n    public void main(String fileName) throws IOException {}\n}</code></pre>\nWhich statement is true?",
+    "question": "Given the content of three files:\nA.java:\n<pre class=\"line-numbers line-hight19\"><code class=\"language-csharp\">public class A {\n    public void a() {}\n    int a;\n}</code></pre>\nB.java:\n<pre class=\"line-numbers line-hight19\"><code class=\"language-csharp\">public class B {\n    private int doStuff() {\n        private int x = 100;\n        return x++;\n    }\n}</code></pre>\nC.java:\n<pre class=\"line-numbers line-hight19\"><code class=\"language-csharp\">import java.io.*;\npackage p1;\nclass A {\n    public (static) void main(String fileName) throws IOException {}\n}</code></pre>\nWhich statement is true?",
     "options": [
       "Only the A.java file compiles successfully.",
       "Only the B.java file compiles successfully.",
@@ -1421,7 +1421,7 @@ window.QUESTIONS_DATA = [
   {
     "id": 81,
     "type": "multiple",
-    "question": "Given the code fragment:\n<pre class=\"line-numbers line-hight19\"><code class=\"language-csharp\">int[] array = {1, 2, 3, 4, 5};</code></pre>\nAnd given the requirements:\n1. Process all the elements of the array in the order of entry.\n2. Process all the elements of the array in the reverse order of entry.\n3. Process alternating elements of the array in the order of entry.\nWhich two statements are true?",
+    "question": "Given the code fragment:\n<pre class=\"line-numbers line-hight19\"><code class=\"language-csharp\">int[] array = {1, 2, 3, 4, 5};</code></pre>\nAnd given the requirements:\n1.Process all the elements of the array in the order of entry.\n2.Process all the elements of the array in the reverse order of entry.\n3.Process alternating elements of the array in the order of entry.\nWhich two statements are true?",
     "options": [
       "Requirements 1, 2, and 3 can be implemented by using the enhanced for loop.",
       "Requirements 1, 2, and 3 can be implemented by using the standard for loop.",
@@ -1499,7 +1499,7 @@ window.QUESTIONS_DATA = [
   {
     "id": 86,
     "type": "single",
-    "question": "<pre class=\"line-numbers line-hight19\"><code class=\"language-csharp\">public class Triangle {\n    static double area;\n    int b = 2, h = 3;\n    public static void main(String[] args) {\n        double p, b, h;\n        //line n1\n        if (area == 0) {\n            b = 3;\n            h = 4;\n            p = 0.5;\n        }\n        area = p * b * h; //line n2\n        System.out.println(\"Area is \" + area);\n    }\n}</code></pre>\nWhat is the result?",
+    "question": "<pre class=\"line-numbers line-hight19\"><code class=\"language-csharp\">public class Triangle {\n    static double area;\n    int b = 2, h = 3;\n    public static void main(String[] args) {\n        double p, b, h;\n        //line n1\n        if (area == 0) {\n            b = 3;\n            h = 4;\n            p = 0.5;\n        }\n        area = p * b * h;\n        //line n2\n        System.out.println(\"Area is \" + area);\n    }\n}</code></pre>\nWhat is the result?",
     "options": [
       "Area is 6.0",
       "Area is 3.0",
@@ -1514,7 +1514,7 @@ window.QUESTIONS_DATA = [
   {
     "id": 87,
     "type": "multiple",
-    "question": "Given the code fragment:\n<pre class=\"line-numbers line-hight19\"><code class=\"language-csharp\">public class Test {\n    public static void main(String[] args) {\n        //line n1\n        switch (x) {\n            case 1:\n                System.out.println(\"One\");\n                break;\n            case 2:\n                System.out.println(\"Two\");\n                break;\n        }\n    }\n}</code></pre>\nWhich three code fragments can be independently inserted at line n1 to enable the code to print One?",
+    "question": "Which three code fragments can be independently inserted at line n1 to enable the code to print one?\n<pre class=\"line-numbers line-hight19\"><code class=\"language-csharp\">public class Test {\n    public static void main(String[] args) {\n        //line n1\n        switch (x) {\n            case 1:\n                System.out.println(\"One\");\n                break;\n            case 2:\n                System.out.println(\"Two\");\n                break;\n        }\n    }\n}</code></pre>",
     "options": [
       "Byte x = 1;",
       "short x = 1;",
@@ -1546,7 +1546,7 @@ window.QUESTIONS_DATA = [
   {
     "id": 89,
     "type": "single",
-    "question": "Given the following code for the classes MyException and Test:\n<pre class=\"line-numbers line-hight19\"><code class=\"language-csharp\">public class MyException extends RuntimeException {}\npublic class Test {\n    public static void main(String[] args) {\n        try {\n            method1();\n        } catch (MyException ne) {\n            System.out.print(\"A\");\n        }\n    }\n    public static void method1() {\n        // line n1\n        try {\n            throw Math.random() > 0.5 ? new MyException() : new RuntimeException();\n        } catch (RuntimeException re) {\n            System.out.print(\"B\");\n        }\n    }\n}</code></pre>\nWhat is the result?",
+    "question": "Given the following code for the classes MyException and Test:\n<pre class=\"line-numbers line-hight19\"><code class=\"language-csharp\">public class MyException extends RuntimeException {}\npublic class Test {\n    public static void main(String[] args) {\n        try {\n            method1();\n        } catch (MyException ne) {\n            System.out.print(\"A\");\n        }\n    }\n    public static void method1() {\n        try {\n            throw Math.random() > 0.5 ? new MyException() : new RuntimeException();\n        } catch (RuntimeException re) {\n            System.out.print(\"B\");\n        }\n    }\n}</code></pre>\nWhat is the result?",
     "options": [
       "A",
       "B",
@@ -1564,10 +1564,10 @@ window.QUESTIONS_DATA = [
     "type": "single",
     "question": "<pre class=\"line-numbers line-hight19\"><code class=\"language-csharp\">public class App {\n    String myStr = \"7007\";\n    public void doStuff(String str) {\n        int myNum = 0;\n        try {\n            String myStr = str;\n            myNum = Integer.parseInt(myStr);\n        } catch (NumberFormatException ne) {\n            System.err.println(\"Error\");\n        }\n        System.out.println(\"myStr: \" + myStr + \", myNum: \" + myNum);\n    }\n    public static void main(String[] args) {\n        App obj = new App();\n        obj.doStuff(\"9009\");\n    }\n}</code></pre>\nWhat is the result?",
     "options": [
-      "myStr: 7007, myNum: 7007",
       "myStr: 9009, myNum: 9009",
+      "myStr: 7007, myNum: 7007",
       "myStr: 7007, myNum: 9009",
-      "myStr: 9009, myNum: 7007"
+      "Compilation fails"
     ],
     "answer": [3],
     "weight": 1,
@@ -1576,31 +1576,31 @@ window.QUESTIONS_DATA = [
   },
   {
     "id": 91,
-    "type": "single",
-    "question": "Which code fragment prints red: blue: small: medium:?",
+    "type": "multiple",
+    "question": "Which two are benefits of polymorphism?",
     "options": [
-      "String[] nums = {\"red\", \"blue\", \"small\", \"medium\"};\nfor (int index = 0; index < nums.length; index++) {\n    System.out.print(nums[index] + \": \");\n}",
-      "String[] nums = {\"red\", \"blue\", \"small\", \"medium\"};\nfor (String n : nums) {\n    System.out.print(n + \": \");\n}",
-      "// 其他循環結構的變體...",
-      "以上皆是"
+      "Faster code at runtime",
+      "More efficient code at runtime",
+      "More dynamic code at runtime",
+      "More flexible and reusable code",
+      "Code that is protected from extension by other classes"
     ],
-    "answer": [2],
+    "answer": [3, 4],
     "weight": 1,
     "image": null,
-    "explanation": "根據原文 B 選項符合標準 for-each 語法。"
+    "explanation": ""
   },
   {
     "id": 92,
-    "type": "multiple",
-    "question": "Which two are Java exceptions?",
+    "type": "single",
+    "question": "<pre class=\"line-numbers line-hight19\"><code class=\"language-csharp\">int nums1[] = new int[3];\nint nums2[] = {1, 2, 3, 4, 5};\nnums1 = nums2;\nfor (int x : nums1) {\n    System.out.print(x + \":\");\n}</code></pre>\nWhat is the result?",
     "options": [
-      "RuntimeException",
-      "ArithmeticException",
-      "MemoryException",
-      "Throwable",
-      "Error"
+      "1:2:3:4:5:",
+      "1:2:3:",
+      "Compilation fails.",
+      "An ArrayOutOfBoundsException is thrown at runtime."
     ],
-    "answer": [1, 2],
+    "answer": [1],
     "weight": 1,
     "image": null,
     "explanation": ""
@@ -1608,12 +1608,44 @@ window.QUESTIONS_DATA = [
   {
     "id": 93,
     "type": "single",
-    "question": "Given the code fragment:\n<pre class=\"line-numbers line-hight19\"><code class=\"language-csharp\">int x = 100;\nint a = x++;\nint b = ++x;\nint c = x++;\nint d = (a < b) ? (a < c) ? a : (b < c) ? b : c : x;</code></pre>\nWhat is the value of d?",
+    "question": "Given the Product class and a code fragment, what is the result?\n<pre class=\"line-numbers line-hight19\"><code class=\"language-csharp\">public class Product {\n    int id;\n    String name;\n    public Product(int id, String name) {\n        this.id = id;\n        this.name = name;\n    }\n}\n// Fragment:\nProduct p1 = new Product(101, \"Pen\");\nProduct p2 = new Product(101, \"Pen\");\nProduct p3 = p1;\nboolean ans1 = p1 == p2;\nboolean ans2 = p1.name.equals(p2.name);\nSystem.out.print(ans1 + \":\" + ans2);</code></pre>",
     "options": [
-      "100",
-      "101",
-      "102",
-      "103"
+      "true:true",
+      "true:false",
+      "false:true",
+      "false:false"
+    ],
+    "answer": [3],
+    "weight": 1,
+    "image": null,
+    "explanation": ""
+  },
+  {
+    "id": 94,
+    "type": "multiple",
+    "question": "Given the following classes, which two options fail to compile when placed at line n1 of the main method?\n<pre class=\"line-numbers line-hight19\"><code class=\"language-csharp\">public class Employee { public int salary; }\npublic class Manager extends Employee { public int budget; }\npublic class Director extends Manager { public int stockOptions; }</code></pre>",
+    "options": [
+      "employee.salary = 50_000;",
+      "director.salary = 80_000;",
+      "employee.budget = 200_000;",
+      "manager.budget = 1_000_000;",
+      "manager.stockOption = 500;",
+      "director.stockOptions = 1_000;"
+    ],
+    "answer": [3, 5],
+    "weight": 1,
+    "image": null,
+    "explanation": ""
+  },
+  {
+    "id": 95,
+    "type": "single",
+    "question": "Which one of the following code examples uses valid Java syntax?",
+    "options": [
+      "public class Boat { public static void main (String [] args) { System.out.println (\"I float.\"); } }",
+      "public class Cake { public static void main (String [] ) { System.out.println (\"Chocolate\"); } }",
+      "public class Dog { public void main (String [] args) { System.out.println (\"Squirrel.\"); } }",
+      "public class Bank { public static void main (String () args) { System.out.println (\"Earn interest.\"); } }"
     ],
     "answer": [1],
     "weight": 1,
@@ -1621,44 +1653,14 @@ window.QUESTIONS_DATA = [
     "explanation": ""
   },
   {
-    "id": 94,
-    "type": "single",
-    "question": "Given the code fragment:\n<pre class=\"line-numbers line-hight19\"><code class=\"language-csharp\">LocalDate date = LocalDate.of(2012, 01, 30);\ndate.plusDays(10);\nSystem.out.println(date);</code></pre>\nWhat is the result?",
-    "options": [
-      "2012-01-30",
-      "2012-02-09",
-      "A DateTimeException is thrown.",
-      "Compilation fails."
-    ],
-    "answer": [1],
-    "weight": 1,
-    "image": null,
-    "explanation": "LocalDate 是不可變的 (Immutable)。"
-  },
-  {
-    "id": 95,
-    "type": "single",
-    "question": "Which is a valid identification of a Lambda expression?",
-    "options": [
-      "() -> {}",
-      "-> {}",
-      "(int x) -> { return x*x; }",
-      "(x, y) -> x + y"
-    ],
-    "answer": [1],
-    "weight": 1,
-    "image": null,
-    "explanation": "根據原文內容標示為 A。"
-  },
-  {
     "id": 96,
     "type": "single",
-    "question": "Which statement is true about the switch statement?",
+    "question": "<pre class=\"line-numbers line-hight19\"><code class=\"language-csharp\">int n [][] = {{1, 3}, {2, 3}};\nfor (int i = n.length-1; i >= 0; i--) {\n    for (int y : n[i]) {\n        System.out.print (y);\n    }\n}</code></pre>\nWhat is the result?",
     "options": [
-      "It must contain the default section.",
-      "The break statement at the end of each case block is optional.",
-      "Its expression must auxiliary result in a boolean value.",
-      "Its case labels can be arbitrary expressions."
+      "1324",
+      "2313",
+      "3142",
+      "4231"
     ],
     "answer": [2],
     "weight": 1,
@@ -1668,7 +1670,7 @@ window.QUESTIONS_DATA = [
   {
     "id": 97,
     "type": "single",
-    "question": "<pre class=\"line-numbers line-hight19\"><code class=\"language-csharp\">class Caller {\n    private void init() { System.out.println(\"Initialized\"); }\n    private void start() { System.out.println(\"Started\"); }\n}\npublic class TestCall {\n    public static void main(String[] args) {\n        Caller c = new Caller();\n        c.start();\n        c.init();\n    }\n}</code></pre>\nWhat is the result?",
+    "question": "<pre class=\"line-numbers line-hight19\"><code class=\"language-csharp\">class Caller {\n    private void init() { System.out.println(\"Initialized\"); }\n    private void start() { init(); System.out.println(\"Started\"); }\n}\npublic class TestCall {\n    public static void main(String[] args) {\n        Caller c = new Caller();\n        c.start();\n        c.init();\n    }\n}</code></pre>\nWhat is the result?",
     "options": [
       "An exception is thrown at runtime.",
       "Initialized Started Initialized",
@@ -1678,12 +1680,12 @@ window.QUESTIONS_DATA = [
     "answer": [4],
     "weight": 1,
     "image": null,
-    "explanation": "私有方法無法從外部類別存取。"
+    "explanation": ""
   },
   {
     "id": 98,
     "type": "single",
-    "question": "<pre class=\"line-numbers line-hight19\"><code class=\"language-csharp\">public static void main(String[] args) {\n    try {\n        int num = 10;\n        int div = 0;\n        int ans = num / div;\n    } catch (ArithmeticException ae) {\n        ans = 0;                         // line n1\n    } catch (Exception e) {\n        System.out.println(\"Invalid calculation\");\n    }\n    System.out.println(\"Answer = \" + ans); // line n2\n}</code></pre>\nWhat is the result?",
+    "question": "<pre class=\"line-numbers line-hight19\"><code class=\"language-csharp\">public static void main(String[] args) {\n    try {\n        int num = 10;\n        int div = 0;\n        int ans = nim / div;\n    } catch (ArithmeticException ae) {\n        ans = 0; // line n1\n    } catch (Exception e) {\n        System.out.println(\"Invalid calculation\");\n    }\n    System.out.println(\"Answer = \" + ans); // line n2\n}</code></pre>\nWhat is the result?",
     "options": [
       "Answer = 0",
       "Invalid calculation",
@@ -1694,19 +1696,19 @@ window.QUESTIONS_DATA = [
     "answer": [5],
     "weight": 1,
     "image": null,
-    "explanation": "變數 ans 在 try 區塊外不可見。"
+    "explanation": ""
   },
   {
     "id": 99,
     "type": "single",
     "question": "<pre class=\"line-numbers line-hight19\"><code class=\"language-csharp\">public class MyField {\n    int x;\n    int y;\n    public void doStuff(int x, int y) {\n        this.x = x;\n        y = this.y;\n    }\n    public void display() {\n        System.out.print(x + \" \" + y + \" : \");\n    }\n    public static void main(String[] args) {\n        MyField m1 = new MyField();\n        m1.x = 100;\n        m1.y = 200;\n        MyField m2 = new MyField();\n        m2.doStuff(m1.x, m1.y);\n        m1.display();\n        m2.display();\n    }\n}</code></pre>\nWhat is the result?",
     "options": [
-      "100 200 : 100 0 : ",
-      "100 200 : 100 200 : ",
-      "100 200 : 0 0 : ",
-      "0 0 : 100 0 : "
+      "100 0 : 100 200 :",
+      "100 0 : 100 0 :",
+      "100 200 : 100 200 :",
+      "100 200 : 100 0 :"
     ],
-    "answer": [1],
+    "answer": [4],
     "weight": 1,
     "image": null,
     "explanation": ""
