@@ -156,7 +156,7 @@
       "None of the above."
     ],
     "answer": [
-      4
+      3
     ],
     "weight": 1,
     "image": null,
@@ -731,7 +731,7 @@
     "explanation": ""
   },
   {
-    "id": 41,
+    "id": 42,
     "type": "single",
     "question": "Given the following main method:\n<pre class=\"line-numbers line-hight19\"><code class=\"language-csharp\">public static void main(String[] args) {\n    int num = 5;\n    do {\n        System.out.print(num-- + &quot; &quot;);\n    } while (num == 0);\n}</code></pre>\nWhat is the result?",
     "options": [
@@ -931,7 +931,7 @@
     "question": "Given:\n<pre class=\"line-numbers line-hight19\"><code class=\"language-csharp\">class Alpha {\n    int ns;\n    static int s;\n    Alpha (int ns) {\n        if (s &lt; ns) {\n            s = ns;\n        }\n        this.ns = ns;\n    }\n    void doPrint() {\n        System.out.println(&quot;ns = &quot; + ns + &quot; s = &quot; + s);\n    }\n}\n\npublic class TestA {\n    public static void main(String[] args) {\n        Alpha ref1 = new Alpha (50);\n        Alpha ref2 = new Alpha (125);\n        Alpha ref3 = new Alpha (100);\n        ref1.doPrint();\n        ref2.doPrint();\n        ref3.doPrint();\n    }\n}</code></pre>\nWhat is the result?",
     "options": [
       "ns = 50 s = 125, ns = 125 s = 125, ns = 100 s = 125",
-      "ns = 50 s = 50, ns = 125 s = 125, ns = 100 s = 100  (註：此處選項內容依據圖表邏輯對應)",
+      "ns = 50 s = 50, ns = 125 s = 125, ns = 100 s = 100",
       "ns = 50 s = 125, ns = 125 s = 125, ns = 0 s = 125",
       "ns = 50 s = 50, ns = 125 s = 125, ns = 100 s = 125"
     ],
@@ -1373,7 +1373,8 @@
     "options": [
       "15,60,45,90,75",
       "15,90,45,90,75",
-      "15,30,75,60,90\nE. 15,30,90,60,90",
+      "15,30,75,60,90",
+      "15,30,90,60,90",
       "15,4,45,60,90"
     ],
     "answer": [
