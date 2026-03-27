@@ -751,7 +751,7 @@ window.QUESTIONS_DATA = [
   {
     "id": 43,
     "type": "single",
-    "question": "Given the code fragment:\n<pre class=\"line-numbers line-hight19\"><code class=\"language-csharp\">int x = 100;\nint a = x++;\nint b = ++x;\nint d = (a &lt; b) ? (a &lt; c ? a : b &lt; c ? b : c) : a;\nSystem.out.println(d);</code></pre>\nWhat is the result?",
+    "question": "Given the code fragment:\n<pre class=\"line-numbers line-hight19\"><code class=\"language-csharp\">int x = 100;\nint a = x++;\nint b = ++x;\nint c = x++;\nint d = (a < b) ? (a < c) ? a : (b < c) ? b : c;\nSystem.out.println(d);</code></pre>\nWhat is the result?",
     "options": [
       "100",
       "101",
