@@ -585,7 +585,7 @@
     "answers": [
       "E"
     ],
-    "question": "pag30\n\nQUESTION 23\nGiven the code fragment:\n\nint x = 100;\nint a = x++;\nint b = x++;\nint d = (a < b) ? (a < c ? a : b < c ? b : c) : a;\nSystem.out.println(d);\nWhat is the result?",
+    "question": "pag30\n\nQUESTION 23\nGiven the code fragment:\n\nint x = 100;\nint a = x++;\nint b = ++x;\nint c = x++;\nint d = (a < b) ? (a < c) ? a : (b < c) ? b : c;\nSystem.out.println(d);\nWhat is the result?",
     "options": {
       "A": "100",
       "B": "101",
