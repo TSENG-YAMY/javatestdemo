@@ -860,7 +860,7 @@ window.QUESTIONS_DATA = [
     "question": "<pre class=\"line-numbers line-hight19\"><code class=\"language-csharp\">public class Test {\n    public static void main(String[] args) {\n        /* insert code here (第 3 行) \n        array[0] = 10; \n        array[1] = 20; \n        System.out.print(array[0] + &quot;:&quot; + array[1]);\n    }\n}</code></pre>\nWhich code fragment, when inserted at line 3, enables the code to print 10:20?",
     "options": [
       "int[] array n = new int[2];",
-      "int[] array; new array = int[2];",
+      "int[] array; array = new int[2];",
       "int array = new int[2];",
       "int array [2];"
     ],
