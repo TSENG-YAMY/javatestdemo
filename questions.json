@@ -670,8 +670,8 @@
     "question": "public class Test {\n    public static void main(String[] args) {\n        /* insert code here (第 3 行) \n        array[0] = 10; \n        array[1] = 20; \n        System.out.print(array[0] + \":\" + array[1]);\n    }\n}\n\nWhich code fragment, when inserted at line 3, enables the code to print 10:20?\n（哪一段程式碼插入第 3 行後，能讓程式印出 10:20？）",
     "options": {
       "A": "int[] array n = new int[2];",
-      "B": "int[] array; array = int[2];",
-      "C": "int array[] = new int[2];",
+      "B": "int[] array; array = new int[2];",
+      "C": "int array = new int[2];",
       "D": "int array [2];"
     }
   },
