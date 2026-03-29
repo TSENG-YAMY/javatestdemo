@@ -931,9 +931,9 @@ window.QUESTIONS_DATA = [
     "question": "Given:\n<pre class=\"line-numbers line-hight19\"><code class=\"language-csharp\">class Alpha {\n    int ns;\n    static int s;\n    Alpha (int ns) {\n        if (s &lt; ns) {\n            s = ns;\n        }\n        this.ns = ns;\n    }\n    void doPrint() {\n        System.out.println(&quot;ns = &quot; + ns + &quot; s = &quot; + s);\n    }\n}\n\npublic class TestA {\n    public static void main(String[] args) {\n        Alpha ref1 = new Alpha (50);\n        Alpha ref2 = new Alpha (125);\n        Alpha ref3 = new Alpha (100);\n        ref1.doPrint();\n        ref2.doPrint();\n        ref3.doPrint();\n    }\n}</code></pre>\nWhat is the result?",
     "options": [
       "ns = 50 s = 125, ns = 125 s = 125, ns = 100 s = 125",
-      "ns = 50 s = 50, ns = 125 s = 125, ns = 100 s = 100",
       "ns = 50 s = 125, ns = 125 s = 125, ns = 0 s = 125",
-      "ns = 50 s = 50, ns = 125 s = 125, ns = 100 s = 125"
+      "ns = 50 s = 50, ns = 125 s = 125, ns = 100 s = 100",
+      "ns = 50 s = 50, ns = 125 s = 125, ns = 0 s = 125"
     ],
     "answer": [
       2
