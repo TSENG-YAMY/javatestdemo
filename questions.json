@@ -809,7 +809,7 @@
       "B",
       "C"
     ],
-    "question": "Given the code fragment: \n\nclass CCMask {\n    public static String maskCC(String creditCard) {\n        String x = \"XXXX-XXXX-XXXX-\";\n        // line n1\n    }\n    public static void main(String[] args) {\n        System.out.println(maskCC(\"1234-5678-9101-1121\"));\n    }\n}\n\nYou must ensure that the maskCC method returns a string that hides all digits of the credir card number except  the four last digits (and hyphens that separate each group of four digits). \n\nWhich two code fragments should you use at line n1?independently,to achieve this requirement?",
+    "question": "Given the code fragment: \n\nclass CCMask {\n    public static String maskCC(String creditCard) {\n        String x = \"XXXX-XXXX-XXXX-\";\n        // line n1\n    }\n    public static void main(String[] args) {\n        System.out.println(maskCC(\"1234-5678-9101-1121\"));\n    }\n}\n\nYou must ensure that the maskCC method returns a string that hides all digits of the credit card number except  the four last digits (and hyphens that separate each group of four digits). \n\nWhich two code fragments should you use at line n1?independently,to achieve this requirement?",
     "options": {
       "A": "StringBuilder sb = new StringBuilder (creditCard);sb.substring (15, 19);return x + sb;",
       "B": "return x + creditCard.substring(15, 19);",
