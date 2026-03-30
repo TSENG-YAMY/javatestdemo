@@ -1057,10 +1057,10 @@ window.QUESTIONS_DATA = [
     "type": "multiple",
     "question": "Given the code fragment:\n<pre class=\"line-numbers line-hight19\"><code class=\"language-csharp\">class CCMask {\n    public static String maskCC(String creditCard) {\n        String x = &quot;XXXX-XXXX-XXXX-&quot;;\n        // line n1\n    }\n    public static void main(String[] args) {\n        System.out.println(maskCC(&quot;1234-5678-9101-1121&quot;));\n    }\n}\n\nYou must ensure that the maskCC method returns a string that hides all digits of the credir card number except  the four last digits (and hyphens that separate each group of four digits). \nWhich two code fragments should you use at line n1?independently,to achieve this requirement?",
     "options": [
-      "StringBuilder sb = new StringBuilder (creditCard); sb.substring (15, 19); return x + sb;",
+      "StringBuilder sb = new StringBuilder (creditCard); \nsb.substring (15, 19); \nreturn x + sb;",
       "return x + creditCard.substring(15, 19);",
-      "StringBuilder sb = new StringBuilder(x); sb.append (creditCard, 15, 19); return sb.toString();",
-      "StringBuilder sb = new StringBuilder (creditCard); StringBuilder s = sb.insert (0, x); return s.toString();"
+      "StringBuilder sb = new StringBuilder(x);\nsb.append (creditCard, 15, 19); \nreturn sb.toString();",
+      "StringBuilder sb = new StringBuilder (creditCard);\nStringBuilder s = sb.insert (0, x);\nreturn s.toString();"
     ],
     "answer": [
       2,
