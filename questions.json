@@ -862,7 +862,7 @@
     "answers": [
       "C"
     ],
-    "question": "Given the code fragments: \n\nPerson.java\npublic class Person {\n    String name;\n    int age;\n    public Person(String n, int a) { name = n; age = a; }\n    public String getName() { return name; }\n    public int getAge() { return age; }\n}\n\nTest.java:\n\npublic static void checkAge(List<Person> list, Predicate<Person> predicate) {\n    for (Person p : list) {\n        if (predicate.test(p)) {\n            System.out.println(p.name + \" \");\n        }\n    }\n}\n\npublic static void main(String[] args) {\n    List<Person> iList = Arrays.asList(new Person(\"Hank\", 45), new Person(\"Charlie\", 40), new Person(\"Smith\", 38));\n    // line n1\n}\n\nWhich code fragment, when inserted at line n1, enables the code to print Hank?",
+    "question": "Given the code fragments: \n\nPerson.java\npublic class Person {\n    String name;\n    int age;\n    public Person(String n, int a) {\n name = n; \nage = a; }\n    public String getName() { \nreturn name; }\n    public int getAge() { \nreturn age; }\n}\n\nTest.java:\n\npublic static void checkAge(List<Person> list, Predicate<Person> predicate) {\n    for (Person p : list) {\n        if (predicate.test(p)) {\n            System.out.println(p.name + \" \");\n        }\n    }\n}\n\npublic static void main(String[] args) {\n    List<Person> iList = Arrays.asList(new Person(\"Hank\", 45), new Person(\"Charlie\", 40), new Person(\"Smith\", 38));\n    // line n1\n}\n\nWhich code fragment, when inserted at line n1, enables the code to print Hank?",
     "options": {
       "A": "checkAge(iList, () -> p.getAge() > 40);",
       "B": "checkAge(iList, Person p -> p.getAge() > 40);",
