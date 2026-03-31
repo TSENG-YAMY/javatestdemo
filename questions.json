@@ -940,7 +940,7 @@
     "answers": [
       "D"
     ],
-    "question": "Given:\n\nclass Vehicle {\n    int x;\n    Vehicle() { this(10); } // line n1\n    Vehicle(int x) { this.x = x; }\n}\nclass Car extends Vehicle {\n    int y;\n    Car() { super(); this(20); } // line n2\n    Car(int y) { this.y = y; }\n    public String toString() { return super.x + \":\" + this.y; }\n}\n\nAnd given the code fragment:\n\nVehicle y = new Car();\nSystem.out.println(y);\n\nWhat is the result?",
+    "question": "Given:\n\nclass Vehicle {\n    int x;\n    Vehicle() { this(10); } // line n1\n    Vehicle(int x) { this.x = x; }\n}\nclass Car extends Vehicle {\n    int y;\n Car() { super(); this(20); } // line n2\n Car(int y) { this.y = y; }\n public String toString() { return super.x + \":\" + this.y; }\n}\n\nAnd given the code fragment:\n\nVehicle y = new Car();\nSystem.out.println(y);\n\nWhat is the result?",
     "options": {
       "A": "10:20",
       "B": "0:20",
