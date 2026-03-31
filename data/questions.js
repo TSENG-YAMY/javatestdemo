@@ -1227,7 +1227,7 @@ window.QUESTIONS_DATA = [
   {
     "id": 70,
     "type": "single",
-    "question": "Given:\n<pre class=\"line-numbers line-hight19\"><code class=\"language-csharp\">class Vehicle {\n    int x;\n    Vehicle() {\n this(10); n\} // line n1\n    Vehicle(int x) {\n this.x = x; n\}\n}\nclass Car extends Vehicle {\n    int y;\n    Car() { super();\n this(20);\n } // line n2\n    Car(int y) {\n this.y = y; \n}\n    public String toString() {\n return super.x + &quot;:&quot; + this.y; }\n}\n\nAnd given the code fragment:\n\nVehicle y = new Car();\nSystem.out.println(y);</code></pre>\nWhat is the result?",
+    "question": "Given:\n<pre class=\"line-numbers line-hight19\"><code class=\"language-csharp\">class Vehicle {\n    int x;\n    Vehicle() {\n this(10); \n} // line n1\n    Vehicle(int x) {\n this.x = x; \n}\n}\nclass Car extends Vehicle {\n    int y;\nCar() { super();\n this(20);\n } // line n2\nCar(int y) {\n this.y = y;\n}\n    public String toString() {\n return super.x + &quot;:&quot; + this.y; }\n}\n\nAnd given the code fragment:\n\nVehicle y = new Car();\nSystem.out.println(y);</code></pre>\nWhat is the result?",
     "options": [
       "A. 10:20",
       "B. 0:20",
