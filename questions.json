@@ -695,7 +695,7 @@
       "C",
       "D"
     ],
-    "question": "Which three are advantages of the Java exception mechanism?\n(哪三項是 Java 異常處理機制的優點？)\n\n which ser of commands print Hello Duke in the console?",
+    "question": "Which three are advantages of the Java exception mechanism?\n(哪三項是 Java 異常處理機制的優點？)",
     "options": {
       "A": "Improves the program structure because the error handling code is separated from the normal program function.",
       "B": "Provides a set of standard exceptions that covers all the possible errors.",
