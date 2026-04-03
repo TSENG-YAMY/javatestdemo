@@ -911,7 +911,7 @@
   {
     "id": 52,
     "type": "single",
-    "question": "<pre class=\"line-numbers line-hight19\"><code class=\"language-csharp\">public class Greeting {\n    public static void main(String[] args) {\n        System.out.println(\"Hello \" + args[0]);\n    }\n}</code></pre>\nWhich set of commands prints Hello Duke?",
+    "question": "<pre class=\"line-numbers line-hight19\"><code class=\"language-csharp\">public class Greeting {\n    public static void main(String[] args) {\n        System.out.println(\"Hello \" + args[0]);\n    }\n}</code></pre> \nWhich set of commands prints Hello Duke in the console??",
     "options": [
       "javac Greeting\njava Greeting Duke",
       "javac Greeting.java Duke\njava Greeting",
