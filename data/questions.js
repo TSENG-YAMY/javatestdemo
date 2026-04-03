@@ -945,7 +945,7 @@ window.QUESTIONS_DATA = [
   {
     "id": 54,
     "type": "single",
-    "question": "Given the code fragment:\n<pre class=\"line-numbers line-hight19\"><code class=\"language-csharp\">JavaLocalDate date1 = LocalDate.now();\nLocalDate date2 = LocalDate.of(2014, 6, 20);\nLocalDate date3 = LocalDate.parse(&quot;2014-06-20&quot;, DateTimeFormatter.ISO_DATE);\nSystem.out.println(&quot;date1 = &quot; + date1);\nSystem.out.println(&quot;date2 = &quot; + date2);\nSystem.out.println(&quot;date3 = &quot; + date3);</code></pre>\nAssume that the system date is June 20, 2014. What is the result?",
+    "question": "Given the code fragment:\n<pre class=\"line-numbers line-hight19\"><code class=\"language-csharp\">LocalDate date1 = LocalDate.now();\nLocalDate date2 = LocalDate.of(2014, 6, 20);\nLocalDate date3 = LocalDate.parse(&quot;2014-06-20&quot;, DateTimeFormatter.ISO_DATE);\nSystem.out.println(&quot;date1 = &quot; + date1);\nSystem.out.println(&quot;date2 = &quot; + date2);\nSystem.out.println(&quot;date3 = &quot; + date3);</code></pre>\nAssume that the system date is June 20, 2014. What is the result?",
     "options": [
       "date1 = 2014-06-20, date2 = 2014-06-20, date3 = 2014-06-20",
       "date1 = 06/20/2014, date2 = 2014-06-20, date3 = Jun 20, 2014",
