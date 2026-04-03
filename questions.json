@@ -705,6 +705,19 @@
     }
   },
   {
+  "id": 52,
+   "answers": [
+      "C"
+    ],
+  "question": "public class Greeting {\n    public static void main(String[] args) {\n        System.out.println(\"Hello \" + args[0]);\n    }\n}\n\nWhich set of commands prints Hello Duke in the console?",
+  "options": {
+    "A": "javac Greeting\njava Greeting Duke",
+    "B": "javac Greeting.java Duke\njava Greeting",
+    "C": "javac Greeting.java\njava Greeting Duke",
+    "D": "javac Greeting.java\njava Greeting.class Duke"
+   }
+  },
+  {
     "id": 53,
     "answers": [
       "B"
