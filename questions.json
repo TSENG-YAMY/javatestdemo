@@ -695,7 +695,7 @@
       "C",
       "D"
     ],
-    "question": "Which three are advantages of the Java exception mechanism?\n(哪三項是 Java 異常處理機制的優點？)",
+    "question": "Which three are advantages of the Java exception mechanism?\n(哪三項是 Java 異常處理機制的優點？)\n\n which ser of commands print Hello Duke in the console?",
     "options": {
       "A": "Improves the program structure because the error handling code is separated from the normal program function.",
       "B": "Provides a set of standard exceptions that covers all the possible errors.",
@@ -722,7 +722,7 @@
     "answers": [
       "A"
     ],
-    "question": "Given the code fragment: \n\nJavaLocalDate date1 = LocalDate.now();\nLocalDate date2 = LocalDate.of(2014, 6, 20);\nLocalDate date3 = LocalDate.parse(\"2014-06-20\", DateTimeFormatter.ISO_DATE);\nSystem.out.println(\"date1 = \" + date1);\nSystem.out.println(\"date2 = \" + date2);\nSystem.out.println(\"date3 = \" + date3);\n\nAssume that the system date is June 20, 2014. What is the result?",
+    "question": "Given the code fragment: \n\nLocalDate date1 = LocalDate.now();\nLocalDate date2 = LocalDate.of(2014, 6, 20);\nLocalDate date3 = LocalDate.parse(\"2014-06-20\", DateTimeFormatter.ISO_DATE);\nSystem.out.println(\"date1 = \" + date1);\nSystem.out.println(\"date2 = \" + date2);\nSystem.out.println(\"date3 = \" + date3);\n\nAssume that the system date is June 20, 2014. What is the result?",
     "options": {
       "A": "date1 = 2014-06-20, date2 = 2014-06-20, date3 = 2014-06-20",
       "B": "date1 = 06/20/2014, date2 = 2014-06-20, date3 = Jun 20, 2014",
