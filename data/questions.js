@@ -891,7 +891,7 @@ window.QUESTIONS_DATA = [
   {
     "id": 51,
     "type": "multiple",
-    "question": "Which three are advantages of the Java exception mechanism? \n\nwhich ser of commands print Hello Duke in the console?",
+    "question": "Which three are advantages of the Java exception mechanism?",
     "options": [
       "Improves the program structure because the error handling code is separated from the normal program function.",
       "Provides a set of standard exceptions that covers all the possible errors.",
@@ -911,7 +911,7 @@ window.QUESTIONS_DATA = [
   {
     "id": 52,
     "type": "single",
-    "question": "<pre class=\"line-numbers line-hight19\"><code class=\"language-csharp\">public class Greeting {\n    public static void main(String[] args) {\n        System.out.println(\"Hello \" + args[0]);\n    }\n}</code></pre>\nWhich set of commands prints Hello Duke?",
+    "question": "<pre class=\"line-numbers line-hight19\"><code class=\"language-csharp\">public class Greeting {\n    public static void main(String[] args) {\n        System.out.println(\"Hello \" + args[0]);\n    }\n}</code></pre> \n\nWhich set of commands prints Hello Duke?",
     "options": [
       "javac Greeting\njava Greeting Duke",
       "javac Greeting.java Duke\njava Greeting",
